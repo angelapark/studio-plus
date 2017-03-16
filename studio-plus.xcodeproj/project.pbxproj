@@ -8,12 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		981936E61E7B457900F8421C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981936E51E7B457900F8421C /* AppDelegate.swift */; };
-		981936E81E7B457900F8421C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981936E71E7B457900F8421C /* ViewController.swift */; };
-		981936EB1E7B457900F8421C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981936E91E7B457900F8421C /* Main.storyboard */; };
 		981936ED1E7B457900F8421C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981936EC1E7B457900F8421C /* Assets.xcassets */; };
 		981936F01E7B457900F8421C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981936EE1E7B457900F8421C /* LaunchScreen.storyboard */; };
 		981936FB1E7B457900F8421C /* studio_plusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981936FA1E7B457900F8421C /* studio_plusTests.swift */; };
 		981937061E7B457900F8421C /* studio_plusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981937051E7B457900F8421C /* studio_plusUITests.swift */; };
+		981937171E7B467E00F8421C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981937161E7B467E00F8421C /* OnboardingViewController.swift */; };
+		981937191E7B46B500F8421C /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981937181E7B46B500F8421C /* Onboarding.storyboard */; };
+		9819371B1E7B46E000F8421C /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819371A1E7B46E000F8421C /* CreateProfileViewController.swift */; };
+		9819371D1E7B46EA00F8421C /* CreateProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9819371C1E7B46EA00F8421C /* CreateProfile.storyboard */; };
+		9819371F1E7B470800F8421C /* ChooseAdventureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819371E1E7B470800F8421C /* ChooseAdventureViewController.swift */; };
+		981937211E7B471000F8421C /* ChooseAdventure.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981937201E7B471000F8421C /* ChooseAdventure.storyboard */; };
+		981937231E7B472500F8421C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981937221E7B472500F8421C /* CameraViewController.swift */; };
+		981937251E7B472C00F8421C /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981937241E7B472C00F8421C /* Camera.storyboard */; };
+		981937271E7B476100F8421C /* ParkMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981937261E7B476100F8421C /* ParkMapViewController.swift */; };
+		981937291E7B477D00F8421C /* ParkMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981937281E7B477D00F8421C /* ParkMap.storyboard */; };
+		9819372B1E7B478B00F8421C /* LeaderBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819372A1E7B478B00F8421C /* LeaderBoardViewController.swift */; };
+		9819372D1E7B479300F8421C /* LeaderBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9819372C1E7B479300F8421C /* LeaderBoard.storyboard */; };
+		9819372F1E7B4A8600F8421C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9819372E1E7B4A8600F8421C /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +47,6 @@
 /* Begin PBXFileReference section */
 		981936E21E7B457900F8421C /* studio-plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "studio-plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		981936E51E7B457900F8421C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		981936E71E7B457900F8421C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		981936EA1E7B457900F8421C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		981936EC1E7B457900F8421C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		981936EF1E7B457900F8421C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		981936F11E7B457900F8421C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +56,19 @@
 		981937011E7B457900F8421C /* studio-plusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "studio-plusUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		981937051E7B457900F8421C /* studio_plusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studio_plusUITests.swift; sourceTree = "<group>"; };
 		981937071E7B457900F8421C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		981937161E7B467E00F8421C /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		981937181E7B46B500F8421C /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		9819371A1E7B46E000F8421C /* CreateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		9819371C1E7B46EA00F8421C /* CreateProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateProfile.storyboard; sourceTree = "<group>"; };
+		9819371E1E7B470800F8421C /* ChooseAdventureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseAdventureViewController.swift; sourceTree = "<group>"; };
+		981937201E7B471000F8421C /* ChooseAdventure.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChooseAdventure.storyboard; sourceTree = "<group>"; };
+		981937221E7B472500F8421C /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		981937241E7B472C00F8421C /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		981937261E7B476100F8421C /* ParkMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkMapViewController.swift; sourceTree = "<group>"; };
+		981937281E7B477D00F8421C /* ParkMap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ParkMap.storyboard; sourceTree = "<group>"; };
+		9819372A1E7B478B00F8421C /* LeaderBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewController.swift; sourceTree = "<group>"; };
+		9819372C1E7B479300F8421C /* LeaderBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeaderBoard.storyboard; sourceTree = "<group>"; };
+		9819372E1E7B4A8600F8421C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +119,13 @@
 		981936E41E7B457900F8421C /* studio-plus */ = {
 			isa = PBXGroup;
 			children = (
+				981937151E7B465B00F8421C /* Models */,
+				981937141E7B465300F8421C /* ViewModels */,
+				981937131E7B464B00F8421C /* Views */,
 				981936E51E7B457900F8421C /* AppDelegate.swift */,
-				981936E71E7B457900F8421C /* ViewController.swift */,
-				981936E91E7B457900F8421C /* Main.storyboard */,
 				981936EC1E7B457900F8421C /* Assets.xcassets */,
 				981936EE1E7B457900F8421C /* LaunchScreen.storyboard */,
+				9819372E1E7B4A8600F8421C /* Main.storyboard */,
 				981936F11E7B457900F8421C /* Info.plist */,
 			);
 			path = "studio-plus";
@@ -123,6 +147,39 @@
 				981937071E7B457900F8421C /* Info.plist */,
 			);
 			path = "studio-plusUITests";
+			sourceTree = "<group>";
+		};
+		981937131E7B464B00F8421C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				981937161E7B467E00F8421C /* OnboardingViewController.swift */,
+				981937181E7B46B500F8421C /* Onboarding.storyboard */,
+				9819371A1E7B46E000F8421C /* CreateProfileViewController.swift */,
+				9819371C1E7B46EA00F8421C /* CreateProfile.storyboard */,
+				9819371E1E7B470800F8421C /* ChooseAdventureViewController.swift */,
+				981937201E7B471000F8421C /* ChooseAdventure.storyboard */,
+				981937221E7B472500F8421C /* CameraViewController.swift */,
+				981937241E7B472C00F8421C /* Camera.storyboard */,
+				981937261E7B476100F8421C /* ParkMapViewController.swift */,
+				981937281E7B477D00F8421C /* ParkMap.storyboard */,
+				9819372A1E7B478B00F8421C /* LeaderBoardViewController.swift */,
+				9819372C1E7B479300F8421C /* LeaderBoard.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		981937141E7B465300F8421C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		981937151E7B465B00F8421C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +250,7 @@
 				TargetAttributes = {
 					981936E11E7B457900F8421C = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 43LXQ9XH3C;
 						ProvisioningStyle = Automatic;
 					};
 					981936F51E7B457900F8421C = {
@@ -233,8 +291,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				981936F01E7B457900F8421C /* LaunchScreen.storyboard in Resources */,
+				981937251E7B472C00F8421C /* Camera.storyboard in Resources */,
 				981936ED1E7B457900F8421C /* Assets.xcassets in Resources */,
-				981936EB1E7B457900F8421C /* Main.storyboard in Resources */,
+				981937211E7B471000F8421C /* ChooseAdventure.storyboard in Resources */,
+				981937291E7B477D00F8421C /* ParkMap.storyboard in Resources */,
+				9819372D1E7B479300F8421C /* LeaderBoard.storyboard in Resources */,
+				9819372F1E7B4A8600F8421C /* Main.storyboard in Resources */,
+				981937191E7B46B500F8421C /* Onboarding.storyboard in Resources */,
+				9819371D1E7B46EA00F8421C /* CreateProfile.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +323,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				981936E81E7B457900F8421C /* ViewController.swift in Sources */,
+				9819371B1E7B46E000F8421C /* CreateProfileViewController.swift in Sources */,
+				981937171E7B467E00F8421C /* OnboardingViewController.swift in Sources */,
+				9819371F1E7B470800F8421C /* ChooseAdventureViewController.swift in Sources */,
+				981937271E7B476100F8421C /* ParkMapViewController.swift in Sources */,
 				981936E61E7B457900F8421C /* AppDelegate.swift in Sources */,
+				9819372B1E7B478B00F8421C /* LeaderBoardViewController.swift in Sources */,
+				981937231E7B472500F8421C /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +365,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		981936E91E7B457900F8421C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				981936EA1E7B457900F8421C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		981936EE1E7B457900F8421C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -410,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 43LXQ9XH3C;
 				INFOPLIST_FILE = "studio-plus/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.park.studio-plus";
@@ -422,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 43LXQ9XH3C;
 				INFOPLIST_FILE = "studio-plus/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.park.studio-plus";

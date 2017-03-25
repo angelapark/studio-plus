@@ -38,6 +38,9 @@
                                             <constraint firstAttribute="width" constant="238" id="pZk-ka-o0L"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="hp-enter-button"/>
+                                        <connections>
+                                            <action selector="enterHogsmeade:" destination="XWf-Pm-CEw" eventType="touchUpInside" id="g7x-IN-d7t"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDV-YG-aCi">
                                         <rect key="frame" x="0.0" y="69" width="238" height="59"/>

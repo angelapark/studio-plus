@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="LfL-VC-J2K" customClass="CameraView" customModule="studio_plus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qF-6R-w3M" customClass="CameraView" customModule="studio_plus" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMM-I9-avA">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4l-hX-7ja">
+                            <rect key="frame" x="319" y="0.0" width="56" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="56" id="Nni-oC-6bt"/>
+                                <constraint firstAttribute="height" constant="48" id="w5v-3g-A00"/>
+                            </constraints>
+                            <state key="normal" image="simpsons-camera-switch"/>
+                            <connections>
+                                <action selector="switchCameras:" destination="LfL-VC-J2K" eventType="touchUpInside" id="htQ-yK-piP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oD-MI-q22">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="qbs-G1-s1x"/>
+                            </constraints>
+                            <connections>
+                                <action selector="toggleHint:" destination="LfL-VC-J2K" eventType="touchUpInside" id="GfP-sJ-ZJT"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="J4l-hX-7ja" secondAttribute="bottom" id="FwF-5C-HOC"/>
+                        <constraint firstItem="J4l-hX-7ja" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" id="IT7-ei-4NW"/>
+                        <constraint firstAttribute="height" constant="48" id="LOd-QG-wiv"/>
+                        <constraint firstItem="5oD-MI-q22" firstAttribute="leading" secondItem="YMM-I9-avA" secondAttribute="leading" id="QcV-UF-2D5"/>
+                        <constraint firstAttribute="trailing" secondItem="J4l-hX-7ja" secondAttribute="trailing" id="VxV-jF-t8N"/>
+                        <constraint firstAttribute="trailing" secondItem="J4l-hX-7ja" secondAttribute="trailing" id="Vy5-N9-t3I"/>
+                        <constraint firstAttribute="bottom" secondItem="J4l-hX-7ja" secondAttribute="bottom" id="cZ5-L9-4bf"/>
+                        <constraint firstItem="J4l-hX-7ja" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" id="lKR-au-YE4"/>
+                        <constraint firstItem="5oD-MI-q22" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" id="mc0-Qo-do6"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkp-6O-f3g" userLabel="Bottom Controls">
+                    <rect key="frame" x="0.0" y="571" width="375" height="96"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cz-RU-Qkm">
+                            <rect key="frame" x="147" y="8" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="CPc-H8-2Ba"/>
+                            </constraints>
+                            <state key="normal" image="hp-camera-button"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bj1-VP-LfK">
+                            <rect key="frame" x="36" y="25" width="45" height="45"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="Ot3-sD-Ge5"/>
+                                <constraint firstAttribute="width" constant="45" id="wpt-mx-6XD"/>
+                            </constraints>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29792774820000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="9cz-RU-Qkm" firstAttribute="centerX" secondItem="Qkp-6O-f3g" secondAttribute="centerX" id="4fr-DI-aOf"/>
+                        <constraint firstAttribute="bottom" secondItem="Bj1-VP-LfK" secondAttribute="bottom" constant="26" id="J3Y-Zl-xW5"/>
+                        <constraint firstItem="9cz-RU-Qkm" firstAttribute="top" secondItem="Qkp-6O-f3g" secondAttribute="topMargin" id="LCg-p6-9I1"/>
+                        <constraint firstItem="Bj1-VP-LfK" firstAttribute="top" secondItem="Qkp-6O-f3g" secondAttribute="top" constant="25" id="Usy-WS-JdB"/>
+                        <constraint firstAttribute="height" constant="96" id="deE-qf-uTJ"/>
+                        <constraint firstItem="9cz-RU-Qkm" firstAttribute="bottom" secondItem="Qkp-6O-f3g" secondAttribute="bottomMargin" id="mva-h8-Oth"/>
+                        <constraint firstItem="Bj1-VP-LfK" firstAttribute="leading" secondItem="Qkp-6O-f3g" secondAttribute="leading" constant="36" id="n7S-ea-GYV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YMM-I9-avA" firstAttribute="leading" secondItem="LfL-VC-J2K" secondAttribute="leading" id="80R-Uu-7TA"/>
+                <constraint firstItem="8qF-6R-w3M" firstAttribute="bottom" secondItem="Qkp-6O-f3g" secondAttribute="bottom" id="HZM-0q-2sN"/>
+                <constraint firstItem="Qkp-6O-f3g" firstAttribute="leading" secondItem="LfL-VC-J2K" secondAttribute="leading" id="L57-B2-PHF"/>
+                <constraint firstItem="8qF-6R-w3M" firstAttribute="top" secondItem="LfL-VC-J2K" secondAttribute="top" id="LWj-d4-OAc"/>
+                <constraint firstAttribute="trailing" secondItem="YMM-I9-avA" secondAttribute="trailing" id="S33-HC-LeL"/>
+                <constraint firstItem="8qF-6R-w3M" firstAttribute="trailing" secondItem="YMM-I9-avA" secondAttribute="trailing" id="Y3k-pB-RK1"/>
+                <constraint firstAttribute="bottom" secondItem="8qF-6R-w3M" secondAttribute="bottom" id="hAl-oY-lLv"/>
+                <constraint firstItem="8qF-6R-w3M" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" id="kdv-af-l5X"/>
+                <constraint firstItem="8qF-6R-w3M" firstAttribute="leading" secondItem="LfL-VC-J2K" secondAttribute="leading" id="oAQ-U7-gf2"/>
+                <constraint firstAttribute="trailing" secondItem="Qkp-6O-f3g" secondAttribute="trailing" id="yS5-er-06k"/>
+            </constraints>
+            <connections>
+                <outlet property="camPreview" destination="8qF-6R-w3M" id="DgX-hL-88n"/>
+                <outlet property="hintButton" destination="5oD-MI-q22" id="3Kt-5N-zMq"/>
+                <outlet property="switchCameraButton" destination="J4l-hX-7ja" id="bgo-DH-6eC"/>
+                <outlet property="thumbnail" destination="Bj1-VP-LfK" id="Iet-E4-b6P"/>
+            </connections>
+            <point key="canvasLocation" x="62.5" y="67.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="hp-camera-button" width="168" height="168"/>
+        <image name="simpsons-camera-switch" width="94" height="72"/>
+    </resources>
+</document>

@@ -10,7 +10,24 @@ import UIKit
 import AVFoundation
 import Photos
 
+struct CameraBrandAssets {
+    let hintImageDefaultName: String
+    let hintImageActivatedName: String
+    
+    init(hintImageDefaultName: String, hintImageActivatedName: String) {
+        self.hintImageDefaultName = hintImageDefaultName
+        self.hintImageActivatedName = hintImageActivatedName
+    }
+}
+
 class CameraViewController: UIViewController {
+    var cameraView: CameraView? {
+        didSet {
+            if let brandAssets = brandAssets, let cameraView = cameraView {
+                cameraView.configure(brandAssets: brandAssets)
+            }
+        }
+    }
     let captureSession = AVCaptureSession()
     let imageOutput = AVCaptureStillImageOutput()
     var previewLayer: AVCaptureVideoPreviewLayer!
@@ -21,13 +38,65 @@ class CameraViewController: UIViewController {
     var resetMarker: UIImageView!
     fileprivate var adjustingExposureContext: String = ""
     
-    @IBOutlet weak var camPreview: UIView!
-    @IBOutlet weak var thumbnail: UIButton!
-    @IBOutlet weak var flashLabel: UILabel!
+    var brandAssets: CameraBrandAssets? {
+        didSet {
+            if let brandAssets = brandAssets {
+                cameraView?.configure(brandAssets: brandAssets)
+            }
+        }
+    }
+    static func viewController() -> CameraViewController? {
+        return UIStoryboard(name: "Camera", bundle: Bundle.main).instantiateInitialViewController() as? CameraViewController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if let cameraView = CameraView.instanceFromNib() as? CameraView {
+            cameraView.switchCameras = { [weak self] in
+                guard let this = self else {
+                    return
+                }
+                // Make sure the device has more than 1 camera.
+                if AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo).count > 1 {
+                    // Check which position the active camera is.
+                    var newPosition: AVCaptureDevicePosition!
+                    if this.activeInput.device.position == AVCaptureDevicePosition.back {
+                        newPosition = AVCaptureDevicePosition.front
+                    } else {
+                        newPosition = AVCaptureDevicePosition.back
+                    }
+                    
+                    // Get camera at new position.
+                    var newCamera: AVCaptureDevice!
+                    let devices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo)
+                    for device in devices! {
+                        if (device as AnyObject).position == newPosition {
+                            newCamera = device as! AVCaptureDevice
+                        }
+                    }
+                    
+                    // Create new input and update capture session.
+                    do {
+                        let input = try AVCaptureDeviceInput(device: newCamera)
+                        this.captureSession.beginConfiguration()
+                        // Remove input for active camera.
+                        this.captureSession.removeInput(this.activeInput)
+                        // Add input for new camera.
+                        if this.captureSession.canAddInput(input) == true {
+                            this.captureSession.addInput(input)
+                           this.activeInput = input
+                        } else {
+                            this.captureSession.addInput(this.activeInput)
+                        }
+                        this.captureSession.commitConfiguration()
+                    } catch {
+                        print("Error switching cameras: \(error)")
+                    }
+                }
+            }
+            self.cameraView = cameraView
+            view.addSubview(cameraView)
+        }
         setupSession()
         setupPreview()
         startSession()
@@ -66,7 +135,12 @@ class CameraViewController: UIViewController {
         
     }
     
+    
     func setupPreview() {
+        guard let camPreview = cameraView?.camPreview else {
+            return
+        }
+        
         // Configure previewLayer
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.frame = camPreview.bounds
@@ -119,54 +193,18 @@ class CameraViewController: UIViewController {
     }
     
     // MARK: - Configure
-    @IBAction func switchCameras(_ sender: AnyObject) {
-        // Make sure the device has more than 1 camera.
-        if AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo).count > 1 {
-            // Check which position the active camera is.
-            var newPosition: AVCaptureDevicePosition!
-            if activeInput.device.position == AVCaptureDevicePosition.back {
-                newPosition = AVCaptureDevicePosition.front
-            } else {
-                newPosition = AVCaptureDevicePosition.back
-            }
-            
-            // Get camera at new position.
-            var newCamera: AVCaptureDevice!
-            let devices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo)
-            for device in devices! {
-                if (device as AnyObject).position == newPosition {
-                    newCamera = device as! AVCaptureDevice
-                }
-            }
-            
-            // Create new input and update capture session.
-            do {
-                let input = try AVCaptureDeviceInput(device: newCamera)
-                captureSession.beginConfiguration()
-                // Remove input for active camera.
-                captureSession.removeInput(activeInput)
-                // Add input for new camera.
-                if captureSession.canAddInput(input) {
-                    captureSession.addInput(input)
-                    activeInput = input
-                } else {
-                    captureSession.addInput(activeInput)
-                }
-                captureSession.commitConfiguration()
-            } catch {
-                print("Error switching cameras: \(error)")
-            }
-        }
-    }
-    
+
     // MARK: Focus Methods
     func tapToFocus(_ recognizer: UIGestureRecognizer) {
-        if activeInput.device.isFocusPointOfInterestSupported {
-            let point = recognizer.location(in: camPreview)
-            let pointOfInterest = previewLayer.captureDevicePointOfInterest(for: point)
-            showMarkerAtPoint(point, marker: focusMarker)
-            focusAtPoint(pointOfInterest)
-        }
+//        guard let camPreview = cameraView?.camPreview else {
+//            return
+//        }
+//        if activeInput.device.isFocusPointOfInterestSupported {
+//            let point = recognizer.location(in: camPreview)
+//            let pointOfInterest = previewLayer.captureDevicePointOfInterest(for: point)
+//            showMarkerAtPoint(point, marker: focusMarker)
+//            focusAtPoint(pointOfInterest)
+//        }
     }
     
     func focusAtPoint(_ point: CGPoint) {
@@ -187,12 +225,15 @@ class CameraViewController: UIViewController {
     
     // MARK: Exposure Methods
     func tapToExpose(_ recognizer: UIGestureRecognizer) {
-        if activeInput.device.isExposurePointOfInterestSupported {
-            let point = recognizer.location(in: camPreview)
-            let pointOfInterest = previewLayer.captureDevicePointOfInterest(for: point)
-            showMarkerAtPoint(point, marker: exposureMarker)
-            exposeAtPoint(pointOfInterest)
-        }
+//        guard let camPreview = cameraView?.camPreview else {
+//            return
+//        }
+//        if activeInput.device.isExposurePointOfInterestSupported {
+//            let point = recognizer.location(in: camPreview)
+//            let pointOfInterest = previewLayer.captureDevicePointOfInterest(for: point)
+//            showMarkerAtPoint(point, marker: exposureMarker)
+//            exposeAtPoint(pointOfInterest)
+//        }
     }
     
     func exposeAtPoint(_ point: CGPoint) {
@@ -327,8 +368,7 @@ class CameraViewController: UIViewController {
             if sampleBuffer != nil {
                 let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
                 let image = UIImage(data: imageData!)
-                let photoBomb = self.penguinPhotoBomb(image!)
-                self.savePhotoToLibrary(photoBomb)
+                self.savePhotoToLibrary(image!)
             } else {
                 print("Error capturing photo: \(error?.localizedDescription)")
             }
@@ -354,46 +394,14 @@ class CameraViewController: UIViewController {
     
     func setPhotoThumbnail(_ image: UIImage) {
         DispatchQueue.main.async { () -> Void in
-            self.thumbnail.contentMode = .scaleAspectFill
+            self.cameraView?.thumbnail.contentMode = .scaleAspectFill
             
-            self.thumbnail.setBackgroundImage(image, for: UIControlState())
+            self.cameraView?.thumbnail.setBackgroundImage(image, for: UIControlState())
             
-            self.thumbnail.layer.borderColor = UIColor.white.cgColor
-            self.thumbnail.layer.borderWidth = 1.0
+            self.cameraView?.thumbnail.layer.borderColor = UIColor.white.cgColor
+            self.cameraView?.thumbnail.layer.borderWidth = 1.0
             
         }
-    }
-    
-    func penguinPhotoBomb(_ image: UIImage) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(image.size, true, 0.0)
-        image.draw(at: CGPoint(x: 0, y: 0))
-        
-        // Composite Penguin
-        let penguinImage = UIImage(named: "Penguin_\(randomInt(4))")
-        
-        var xFactor: CGFloat
-        if randomFloat(from: 0.0, to: 1.0) >= 0.5 {
-            xFactor = randomFloat(from: 0.0, to: 0.25)
-        } else {
-            xFactor = randomFloat(from: 0.75, to: 1.0)
-        }
-        
-        var yFactor: CGFloat
-        if image.size.width < image.size.height {
-            yFactor = 0.0
-        } else {
-            yFactor = 0.35
-        }
-        
-        let penguinX = (image.size.width * xFactor) - (penguinImage!.size.width / 2)
-        let penguinY = (image.size.height * 0.5) - (penguinImage!.size.height * yFactor)
-        let penguinOrigin = CGPoint(x: penguinX, y: penguinY)
-        
-        penguinImage?.draw(at: penguinOrigin)
-        
-        let finalImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return finalImage!
     }
     
     func imageViewWithImage(_ name: String) -> UIImageView {
@@ -429,7 +437,7 @@ class CameraViewController: UIViewController {
         if segue.identifier == "QuickLookSegue" {
             let quickLook = segue.destination as! QuickLookViewController
             
-            if let image = thumbnail.backgroundImage(for: UIControlState()) {
+            if let image = cameraView?.thumbnail.backgroundImage(for: UIControlState()) {
                 quickLook.photoImage = image
             } else {
                 quickLook.photoImage = UIImage(named: "Penguin")

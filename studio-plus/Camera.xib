@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qF-6R-w3M" customClass="CameraView" customModule="studio_plus" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qF-6R-w3M">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
@@ -66,6 +66,9 @@
                                 <constraint firstAttribute="width" constant="80" id="CPc-H8-2Ba"/>
                             </constraints>
                             <state key="normal" image="hp-camera-button"/>
+                            <connections>
+                                <action selector="capturePhoto:" destination="LfL-VC-J2K" eventType="touchUpInside" id="Le6-u2-ZyM"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bj1-VP-LfK">
                             <rect key="frame" x="36" y="25" width="45" height="45"/>

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		436B15F91E8622EF0056D321 /* FranchiseHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436B15F71E8622EF0056D321 /* FranchiseHomeViewController.swift */; };
 		436B15FD1E8623160056D321 /* FranchiseHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436B15FC1E8623160056D321 /* FranchiseHome.storyboard */; };
+		436B16001E8626A10056D321 /* FranchiseHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436B15FE1E8626A10056D321 /* FranchiseHome.storyboard */; };
+		436B16011E8626A10056D321 /* FranchiseHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436B15FF1E8626A10056D321 /* FranchiseHomeViewController.swift */; };
 		981936E61E7B457900F8421C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981936E51E7B457900F8421C /* AppDelegate.swift */; };
 		981936ED1E7B457900F8421C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981936EC1E7B457900F8421C /* Assets.xcassets */; };
 		981936F01E7B457900F8421C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981936EE1E7B457900F8421C /* LaunchScreen.storyboard */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		436B15F71E8622EF0056D321 /* FranchiseHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FranchiseHomeViewController.swift; path = "studio-plus/Views/FranchiseHomeViewController.swift"; sourceTree = "<group>"; };
 		436B15FC1E8623160056D321 /* FranchiseHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FranchiseHome.storyboard; path = "studio-plus/Views/FranchiseHome.storyboard"; sourceTree = "<group>"; };
+		436B15FE1E8626A10056D321 /* FranchiseHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FranchiseHome.storyboard; path = Views/FranchiseHome.storyboard; sourceTree = "<group>"; };
+		436B15FF1E8626A10056D321 /* FranchiseHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FranchiseHomeViewController.swift; path = Views/FranchiseHomeViewController.swift; sourceTree = "<group>"; };
 		981936E21E7B457900F8421C /* studio-plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "studio-plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		981936E51E7B457900F8421C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		981936EC1E7B457900F8421C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,16 +104,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		436B15FB1E8622F70056D321 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				436B15FC1E8623160056D321 /* FranchiseHome.storyboard */,
-				436B15F71E8622EF0056D321 /* FranchiseHomeViewController.swift */,
-			);
-			name = Views;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		981936D91E7B457900F8421C = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +160,8 @@
 		981937131E7B464B00F8421C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				436B15FE1E8626A10056D321 /* FranchiseHome.storyboard */,
+				436B15FF1E8626A10056D321 /* FranchiseHomeViewController.swift */,
 				981937161E7B467E00F8421C /* OnboardingViewController.swift */,
 				981937181E7B46B500F8421C /* Onboarding.storyboard */,
 				9819371A1E7B46E000F8421C /* CreateProfileViewController.swift */,
@@ -307,6 +303,7 @@
 				981936F01E7B457900F8421C /* LaunchScreen.storyboard in Resources */,
 				981937251E7B472C00F8421C /* Camera.storyboard in Resources */,
 				981936ED1E7B457900F8421C /* Assets.xcassets in Resources */,
+				436B16001E8626A10056D321 /* FranchiseHome.storyboard in Resources */,
 				981937211E7B471000F8421C /* ChooseAdventure.storyboard in Resources */,
 				981937291E7B477D00F8421C /* ParkMap.storyboard in Resources */,
 				9819372D1E7B479300F8421C /* LeaderBoard.storyboard in Resources */,
@@ -341,6 +338,7 @@
 				9819371B1E7B46E000F8421C /* CreateProfileViewController.swift in Sources */,
 				981937171E7B467E00F8421C /* OnboardingViewController.swift in Sources */,
 				9819371F1E7B470800F8421C /* ChooseAdventureViewController.swift in Sources */,
+				436B16011E8626A10056D321 /* FranchiseHomeViewController.swift in Sources */,
 				981937271E7B476100F8421C /* ParkMapViewController.swift in Sources */,
 				436B15F91E8622EF0056D321 /* FranchiseHomeViewController.swift in Sources */,
 				981936E61E7B457900F8421C /* AppDelegate.swift in Sources */,

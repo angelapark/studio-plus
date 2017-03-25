@@ -27,6 +27,30 @@
 		9819372B1E7B478B00F8421C /* LeaderBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819372A1E7B478B00F8421C /* LeaderBoardViewController.swift */; };
 		9819372D1E7B479300F8421C /* LeaderBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9819372C1E7B479300F8421C /* LeaderBoard.storyboard */; };
 		9819372F1E7B4A8600F8421C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9819372E1E7B4A8600F8421C /* Main.storyboard */; };
+		983C35251E87029000087541 /* VuforiaEAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 983C351D1E87029000087541 /* VuforiaEAGLView.mm */; };
+		983C35261E87029000087541 /* VuforiaShaderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 983C351F1E87029000087541 /* VuforiaShaderUtils.m */; };
+		983C35271E87029000087541 /* VuforiaManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 983C35211E87029000087541 /* VuforiaManager.mm */; };
+		983C35281E87029000087541 /* VuforiaObjects.mm in Sources */ = {isa = PBXBuildFile; fileRef = 983C35231E87029000087541 /* VuforiaObjects.mm */; };
+		983C35331E87029B00087541 /* model_krusty.dae in Resources */ = {isa = PBXBuildFile; fileRef = 983C35291E87029B00087541 /* model_krusty.dae */; };
+		983C35341E87029B00087541 /* model_bart.dae in Resources */ = {isa = PBXBuildFile; fileRef = 983C352A1E87029B00087541 /* model_bart.dae */; };
+		983C35351E87029B00087541 /* StonesAndChips.dat in Resources */ = {isa = PBXBuildFile; fileRef = 983C352B1E87029B00087541 /* StonesAndChips.dat */; };
+		983C35361E87029B00087541 /* StonesAndChips.xml in Resources */ = {isa = PBXBuildFile; fileRef = 983C352C1E87029B00087541 /* StonesAndChips.xml */; };
+		983C35371E87029B00087541 /* Tarmac.dat in Resources */ = {isa = PBXBuildFile; fileRef = 983C352D1E87029B00087541 /* Tarmac.dat */; };
+		983C35381E87029B00087541 /* Tarmac.xml in Resources */ = {isa = PBXBuildFile; fileRef = 983C352E1E87029B00087541 /* Tarmac.xml */; };
+		983C35391E87029B00087541 /* VuforiaSample.dat in Resources */ = {isa = PBXBuildFile; fileRef = 983C352F1E87029B00087541 /* VuforiaSample.dat */; };
+		983C353A1E87029B00087541 /* VuforiaSample.xml in Resources */ = {isa = PBXBuildFile; fileRef = 983C35301E87029B00087541 /* VuforiaSample.xml */; };
+		983C353C1E87032800087541 /* SpringfieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983C353B1E87032800087541 /* SpringfieldViewController.swift */; };
+		983C353E1E87046200087541 /* vuforia-sdk-ios-6-2-9 in Resources */ = {isa = PBXBuildFile; fileRef = 983C353D1E87046200087541 /* vuforia-sdk-ios-6-2-9 */; };
+		983C35491E8704CC00087541 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C353F1E8704CC00087541 /* SpriteKit.framework */; };
+		983C354A1E8704CC00087541 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C35401E8704CC00087541 /* MediaPlayer.framework */; };
+		983C354B1E8704CC00087541 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C35411E8704CC00087541 /* OpenGLES.framework */; };
+		983C354C1E8704CC00087541 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C35421E8704CC00087541 /* CoreMedia.framework */; };
+		983C354D1E8704CC00087541 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C35431E8704CC00087541 /* SceneKit.framework */; };
+		983C354E1E8704CC00087541 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C35441E8704CC00087541 /* SystemConfiguration.framework */; };
+		983C354F1E8704CC00087541 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C35451E8704CC00087541 /* AudioToolbox.framework */; };
+		983C35501E8704CC00087541 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C35461E8704CC00087541 /* AVFoundation.framework */; };
+		983C35511E8704CC00087541 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C35471E8704CC00087541 /* CoreMotion.framework */; };
+		983C35541E870AD400087541 /* libVuforia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C35531E870AD400087541 /* libVuforia.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +97,35 @@
 		9819372A1E7B478B00F8421C /* LeaderBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewController.swift; sourceTree = "<group>"; };
 		9819372C1E7B479300F8421C /* LeaderBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeaderBoard.storyboard; sourceTree = "<group>"; };
 		9819372E1E7B4A8600F8421C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		983C351B1E87028600087541 /* studio-plus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "studio-plus-Bridging-Header.h"; sourceTree = "<group>"; };
+		983C351C1E87029000087541 /* VuforiaEAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VuforiaEAGLView.h; path = VuforiaManager/VuforiaEAGLView.h; sourceTree = "<group>"; };
+		983C351D1E87029000087541 /* VuforiaEAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = VuforiaEAGLView.mm; path = VuforiaManager/VuforiaEAGLView.mm; sourceTree = "<group>"; };
+		983C351E1E87029000087541 /* VuforiaShaderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VuforiaShaderUtils.h; path = VuforiaManager/VuforiaShaderUtils.h; sourceTree = "<group>"; };
+		983C351F1E87029000087541 /* VuforiaShaderUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VuforiaShaderUtils.m; path = VuforiaManager/VuforiaShaderUtils.m; sourceTree = "<group>"; };
+		983C35201E87029000087541 /* VuforiaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VuforiaManager.h; path = VuforiaManager/VuforiaManager.h; sourceTree = "<group>"; };
+		983C35211E87029000087541 /* VuforiaManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = VuforiaManager.mm; path = VuforiaManager/VuforiaManager.mm; sourceTree = "<group>"; };
+		983C35221E87029000087541 /* VuforiaObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VuforiaObjects.h; path = VuforiaManager/VuforiaObjects.h; sourceTree = "<group>"; };
+		983C35231E87029000087541 /* VuforiaObjects.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = VuforiaObjects.mm; path = VuforiaManager/VuforiaObjects.mm; sourceTree = "<group>"; };
+		983C35291E87029B00087541 /* model_krusty.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = model_krusty.dae; sourceTree = "<group>"; };
+		983C352A1E87029B00087541 /* model_bart.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = model_bart.dae; sourceTree = "<group>"; };
+		983C352B1E87029B00087541 /* StonesAndChips.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = StonesAndChips.dat; path = VuforiaAssets/ImageTargets/StonesAndChips.dat; sourceTree = "<group>"; };
+		983C352C1E87029B00087541 /* StonesAndChips.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = StonesAndChips.xml; path = VuforiaAssets/ImageTargets/StonesAndChips.xml; sourceTree = "<group>"; };
+		983C352D1E87029B00087541 /* Tarmac.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = Tarmac.dat; path = VuforiaAssets/ImageTargets/Tarmac.dat; sourceTree = "<group>"; };
+		983C352E1E87029B00087541 /* Tarmac.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Tarmac.xml; path = VuforiaAssets/ImageTargets/Tarmac.xml; sourceTree = "<group>"; };
+		983C352F1E87029B00087541 /* VuforiaSample.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = VuforiaSample.dat; path = VuforiaAssets/ImageTargets/VuforiaSample.dat; sourceTree = "<group>"; };
+		983C35301E87029B00087541 /* VuforiaSample.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = VuforiaSample.xml; path = VuforiaAssets/ImageTargets/VuforiaSample.xml; sourceTree = "<group>"; };
+		983C353B1E87032800087541 /* SpringfieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringfieldViewController.swift; sourceTree = "<group>"; };
+		983C353D1E87046200087541 /* vuforia-sdk-ios-6-2-9 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "vuforia-sdk-ios-6-2-9"; sourceTree = "<group>"; };
+		983C353F1E8704CC00087541 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		983C35401E8704CC00087541 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		983C35411E8704CC00087541 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		983C35421E8704CC00087541 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		983C35431E8704CC00087541 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		983C35441E8704CC00087541 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		983C35451E8704CC00087541 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		983C35461E8704CC00087541 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		983C35471E8704CC00087541 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		983C35531E870AD400087541 /* libVuforia.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVuforia.a; path = "../VuforiaSampleSwift/VuforiaSampleSwift/vuforia-sdk-ios-6-2-9/build/lib/arm/libVuforia.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +133,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				983C35541E870AD400087541 /* libVuforia.a in Frameworks */,
+				983C35501E8704CC00087541 /* AVFoundation.framework in Frameworks */,
+				983C35511E8704CC00087541 /* CoreMotion.framework in Frameworks */,
+				983C354C1E8704CC00087541 /* CoreMedia.framework in Frameworks */,
+				983C354A1E8704CC00087541 /* MediaPlayer.framework in Frameworks */,
+				983C354D1E8704CC00087541 /* SceneKit.framework in Frameworks */,
+				983C35491E8704CC00087541 /* SpriteKit.framework in Frameworks */,
+				983C354F1E8704CC00087541 /* AudioToolbox.framework in Frameworks */,
+				983C354E1E8704CC00087541 /* SystemConfiguration.framework in Frameworks */,
+				983C354B1E8704CC00087541 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +170,7 @@
 				981936F91E7B457900F8421C /* studio-plusTests */,
 				981937041E7B457900F8421C /* studio-plusUITests */,
 				981936E31E7B457900F8421C /* Products */,
+				983C35521E870AD400087541 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +187,9 @@
 		981936E41E7B457900F8421C /* studio-plus */ = {
 			isa = PBXGroup;
 			children = (
+				983C351B1E87028600087541 /* studio-plus-Bridging-Header.h */,
+				983C35241E87029000087541 /* VuforiaManager */,
+				983C35321E87029B00087541 /* VuforiaAssets */,
 				981937151E7B465B00F8421C /* Models */,
 				981937141E7B465300F8421C /* ViewModels */,
 				981937131E7B464B00F8421C /* Views */,
@@ -130,8 +197,11 @@
 				981936EC1E7B457900F8421C /* Assets.xcassets */,
 				981936EE1E7B457900F8421C /* LaunchScreen.storyboard */,
 				9819372E1E7B4A8600F8421C /* Main.storyboard */,
+				983C353B1E87032800087541 /* SpringfieldViewController.swift */,
 				4347A5091E86F94B000D6CCB /* ViewController.swift */,
 				981936F11E7B457900F8421C /* Info.plist */,
+				983C353D1E87046200087541 /* vuforia-sdk-ios-6-2-9 */,
+				983C35481E8704CC00087541 /* Frameworks */,
 			);
 			path = "studio-plus";
 			sourceTree = "<group>";
@@ -186,6 +256,71 @@
 			children = (
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		983C35241E87029000087541 /* VuforiaManager */ = {
+			isa = PBXGroup;
+			children = (
+				983C351C1E87029000087541 /* VuforiaEAGLView.h */,
+				983C351D1E87029000087541 /* VuforiaEAGLView.mm */,
+				983C351E1E87029000087541 /* VuforiaShaderUtils.h */,
+				983C351F1E87029000087541 /* VuforiaShaderUtils.m */,
+				983C35201E87029000087541 /* VuforiaManager.h */,
+				983C35211E87029000087541 /* VuforiaManager.mm */,
+				983C35221E87029000087541 /* VuforiaObjects.h */,
+				983C35231E87029000087541 /* VuforiaObjects.mm */,
+			);
+			name = VuforiaManager;
+			path = ../../VuforiaSampleSwift/VuforiaSampleSwift;
+			sourceTree = "<group>";
+		};
+		983C35311E87029B00087541 /* ImageTargets */ = {
+			isa = PBXGroup;
+			children = (
+				983C35291E87029B00087541 /* model_krusty.dae */,
+				983C352A1E87029B00087541 /* model_bart.dae */,
+				983C352B1E87029B00087541 /* StonesAndChips.dat */,
+				983C352C1E87029B00087541 /* StonesAndChips.xml */,
+				983C352D1E87029B00087541 /* Tarmac.dat */,
+				983C352E1E87029B00087541 /* Tarmac.xml */,
+				983C352F1E87029B00087541 /* VuforiaSample.dat */,
+				983C35301E87029B00087541 /* VuforiaSample.xml */,
+			);
+			name = ImageTargets;
+			sourceTree = "<group>";
+		};
+		983C35321E87029B00087541 /* VuforiaAssets */ = {
+			isa = PBXGroup;
+			children = (
+				983C35311E87029B00087541 /* ImageTargets */,
+			);
+			name = VuforiaAssets;
+			path = ../../VuforiaSampleSwift/VuforiaSampleSwift;
+			sourceTree = "<group>";
+		};
+		983C35481E8704CC00087541 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				983C353F1E8704CC00087541 /* SpriteKit.framework */,
+				983C35401E8704CC00087541 /* MediaPlayer.framework */,
+				983C35411E8704CC00087541 /* OpenGLES.framework */,
+				983C35421E8704CC00087541 /* CoreMedia.framework */,
+				983C35431E8704CC00087541 /* SceneKit.framework */,
+				983C35441E8704CC00087541 /* SystemConfiguration.framework */,
+				983C35451E8704CC00087541 /* AudioToolbox.framework */,
+				983C35461E8704CC00087541 /* AVFoundation.framework */,
+				983C35471E8704CC00087541 /* CoreMotion.framework */,
+			);
+			name = Frameworks;
+			path = /Users/angelapark/VuforiaSampleSwift/VuforiaSampleSwift/..;
+			sourceTree = "<absolute>";
+		};
+		983C35521E870AD400087541 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				983C35531E870AD400087541 /* libVuforia.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,12 +434,21 @@
 				981936F01E7B457900F8421C /* LaunchScreen.storyboard in Resources */,
 				981937251E7B472C00F8421C /* Camera.storyboard in Resources */,
 				981936ED1E7B457900F8421C /* Assets.xcassets in Resources */,
+				983C35361E87029B00087541 /* StonesAndChips.xml in Resources */,
 				981937211E7B471000F8421C /* ChooseAdventure.storyboard in Resources */,
 				981937291E7B477D00F8421C /* ParkMap.storyboard in Resources */,
+				983C35391E87029B00087541 /* VuforiaSample.dat in Resources */,
 				9819372D1E7B479300F8421C /* LeaderBoard.storyboard in Resources */,
+				983C35381E87029B00087541 /* Tarmac.xml in Resources */,
+				983C35341E87029B00087541 /* model_bart.dae in Resources */,
+				983C35351E87029B00087541 /* StonesAndChips.dat in Resources */,
 				9819372F1E7B4A8600F8421C /* Main.storyboard in Resources */,
+				983C353E1E87046200087541 /* vuforia-sdk-ios-6-2-9 in Resources */,
 				981937191E7B46B500F8421C /* Onboarding.storyboard in Resources */,
+				983C35331E87029B00087541 /* model_krusty.dae in Resources */,
 				9819371D1E7B46EA00F8421C /* CreateProfile.storyboard in Resources */,
+				983C353A1E87029B00087541 /* VuforiaSample.xml in Resources */,
+				983C35371E87029B00087541 /* Tarmac.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,10 +473,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				983C353C1E87032800087541 /* SpringfieldViewController.swift in Sources */,
 				4347A50A1E86F94B000D6CCB /* ViewController.swift in Sources */,
 				9819371B1E7B46E000F8421C /* CreateProfileViewController.swift in Sources */,
 				4347A5081E86F8C0000D6CCB /* ImagePreviewViewController.swift in Sources */,
+				983C35261E87029000087541 /* VuforiaShaderUtils.m in Sources */,
+				983C35271E87029000087541 /* VuforiaManager.mm in Sources */,
 				981937171E7B467E00F8421C /* OnboardingViewController.swift in Sources */,
+				983C35281E87029000087541 /* VuforiaObjects.mm in Sources */,
+				983C35251E87029000087541 /* VuforiaEAGLView.mm in Sources */,
 				9819371F1E7B470800F8421C /* ChooseAdventureViewController.swift in Sources */,
 				981937271E7B476100F8421C /* ParkMapViewController.swift in Sources */,
 				981936E61E7B457900F8421C /* AppDelegate.swift in Sources */,
@@ -480,10 +629,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 43LXQ9XH3C;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/studio-plus/vuforia-sdk-ios-6-2-9/build/include\"";
 				INFOPLIST_FILE = "studio-plus/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/studio-plus/vuforia-sdk-ios-6-2-9/build/lib/arm",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.park.studio-plus";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "studio-plus/studio-plus-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -493,10 +649,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 43LXQ9XH3C;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/studio-plus/vuforia-sdk-ios-6-2-9/build/include\"";
 				INFOPLIST_FILE = "studio-plus/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/studio-plus/vuforia-sdk-ios-6-2-9/build/lib/arm",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.park.studio-plus";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "studio-plus/studio-plus-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

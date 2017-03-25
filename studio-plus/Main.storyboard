@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="vsI-M0-BZP">
             <objects>
-                <viewController id="XWf-Pm-CEw" sceneMemberID="viewController">
+                <viewController id="XWf-Pm-CEw" customClass="ViewController" customModule="studio_plus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qCI-17-3a1"/>
                         <viewControllerLayoutGuide type="bottom" id="sAA-mV-s3u"/>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfc-6j-Bka">
-                                <rect key="frame" x="169" y="-84" width="37" height="21"/>
+                                <rect key="frame" x="169" y="39" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>

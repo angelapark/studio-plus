@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4347A5081E86F8C0000D6CCB /* ImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347A5061E86F8C0000D6CCB /* ImagePreviewViewController.swift */; };
 		4347A50A1E86F94B000D6CCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347A5091E86F94B000D6CCB /* ViewController.swift */; };
+		4347A50C1E8701B4000D6CCB /* Camera.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4347A50B1E8701B4000D6CCB /* Camera.xib */; };
+		4347A50E1E870261000D6CCB /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347A50D1E870261000D6CCB /* CameraView.swift */; };
 		981936E61E7B457900F8421C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981936E51E7B457900F8421C /* AppDelegate.swift */; };
 		981936ED1E7B457900F8421C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981936EC1E7B457900F8421C /* Assets.xcassets */; };
 		981936F01E7B457900F8421C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981936EE1E7B457900F8421C /* LaunchScreen.storyboard */; };
@@ -73,6 +75,8 @@
 /* Begin PBXFileReference section */
 		4347A5061E86F8C0000D6CCB /* ImagePreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreviewViewController.swift; sourceTree = "<group>"; };
 		4347A5091E86F94B000D6CCB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4347A50B1E8701B4000D6CCB /* Camera.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Camera.xib; sourceTree = "<group>"; };
+		4347A50D1E870261000D6CCB /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		981936E21E7B457900F8421C /* studio-plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "studio-plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		981936E51E7B457900F8421C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		981936EC1E7B457900F8421C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 		981937131E7B464B00F8421C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4347A50B1E8701B4000D6CCB /* Camera.xib */,
+				4347A50D1E870261000D6CCB /* CameraView.swift */,
 				4347A5061E86F8C0000D6CCB /* ImagePreviewViewController.swift */,
 				981937161E7B467E00F8421C /* OnboardingViewController.swift */,
 				981937181E7B46B500F8421C /* Onboarding.storyboard */,
@@ -391,7 +397,7 @@
 				TargetAttributes = {
 					981936E11E7B457900F8421C = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 43LXQ9XH3C;
+						DevelopmentTeam = VFBSD3EVJ3;
 						ProvisioningStyle = Automatic;
 					};
 					981936F51E7B457900F8421C = {
@@ -433,6 +439,7 @@
 			files = (
 				981936F01E7B457900F8421C /* LaunchScreen.storyboard in Resources */,
 				981937251E7B472C00F8421C /* Camera.storyboard in Resources */,
+				4347A50C1E8701B4000D6CCB /* Camera.xib in Resources */,
 				981936ED1E7B457900F8421C /* Assets.xcassets in Resources */,
 				983C35361E87029B00087541 /* StonesAndChips.xml in Resources */,
 				981937211E7B471000F8421C /* ChooseAdventure.storyboard in Resources */,
@@ -479,6 +486,7 @@
 				4347A5081E86F8C0000D6CCB /* ImagePreviewViewController.swift in Sources */,
 				983C35261E87029000087541 /* VuforiaShaderUtils.m in Sources */,
 				983C35271E87029000087541 /* VuforiaManager.mm in Sources */,
+				4347A50E1E870261000D6CCB /* CameraView.swift in Sources */,
 				981937171E7B467E00F8421C /* OnboardingViewController.swift in Sources */,
 				983C35281E87029000087541 /* VuforiaObjects.mm in Sources */,
 				983C35251E87029000087541 /* VuforiaEAGLView.mm in Sources */,
@@ -632,6 +640,7 @@
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/studio-plus/vuforia-sdk-ios-6-2-9/build/include\"";
 				INFOPLIST_FILE = "studio-plus/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -652,6 +661,7 @@
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/studio-plus/vuforia-sdk-ios-6-2-9/build/include\"";
 				INFOPLIST_FILE = "studio-plus/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

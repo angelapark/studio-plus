@@ -45,6 +45,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDV-YG-aCi">
                                         <rect key="frame" x="0.0" y="69" width="238" height="59"/>
                                         <state key="normal" backgroundImage="simpsons-enter-button"/>
+                                        <connections>
+                                            <action selector="SegueToSpringfield:" destination="XWf-Pm-CEw" eventType="touchUpInside" id="mdJ-Jl-WSu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

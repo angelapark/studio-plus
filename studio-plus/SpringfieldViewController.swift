@@ -15,10 +15,7 @@ class SpringfieldViewController: UIViewController {
     let vuforiaDataSetFile = "VuforiaSample.xml"
     
     var vuforiaManager: VuforiaManager? = nil
-    
-    var session: AVCaptureSession?
-    var stillImageOutput: AVCaptureStillImageOutput?
-    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    var cameraVC: CameraViewController?
     
     let boxMaterial = SCNMaterial()
     fileprivate var lastSceneName: String? = nil
@@ -60,30 +57,7 @@ class SpringfieldViewController: UIViewController {
     }
     
     func startCameraSession() {
-        let session = AVCaptureSession()
-        session.sessionPreset = AVCaptureSessionPresetPhoto
-        let backCamera = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
-        
-        var error: NSError?
-        var input: AVCaptureDeviceInput?
-        do {
-            input = try AVCaptureDeviceInput(device: backCamera)
-        } catch let error1 as NSError {
-            error = error1
-            input = nil
-            print(error!.localizedDescription)
-        }
-        
-        stillImageOutput = AVCaptureStillImageOutput()
-        stillImageOutput?.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
-        
-        if session.canAddOutput(stillImageOutput) {
-            session.addOutput(stillImageOutput)
-            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: session)
-            videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspect
-            videoPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-            session.startRunning()
-        }
+        // camera session
     }
     
     // camera button
@@ -111,6 +85,12 @@ private extension SpringfieldViewController {
                                        name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         
         vuforiaManager?.prepare(with: .portrait)
+        
+        cameraVC = CameraViewController()
+        self.addChildViewController(cameraVC!)
+//        cameraVC?.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+//        self.view.addSubview((cameraVC?.view)!)
+//        cameraVC?.didMove(toParentViewController: self)
     }
     
     func pause() {

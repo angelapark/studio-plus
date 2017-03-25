@@ -201,7 +201,6 @@
 				981936EC1E7B457900F8421C /* Assets.xcassets */,
 				981936EE1E7B457900F8421C /* LaunchScreen.storyboard */,
 				9819372E1E7B4A8600F8421C /* Main.storyboard */,
-				983C353B1E87032800087541 /* SpringfieldViewController.swift */,
 				4347A5091E86F94B000D6CCB /* ViewController.swift */,
 				981936F11E7B457900F8421C /* Info.plist */,
 				983C353D1E87046200087541 /* vuforia-sdk-ios-6-2-9 */,
@@ -246,6 +245,7 @@
 				981937281E7B477D00F8421C /* ParkMap.storyboard */,
 				9819372A1E7B478B00F8421C /* LeaderBoardViewController.swift */,
 				9819372C1E7B479300F8421C /* LeaderBoard.storyboard */,
+				983C35551E871BD700087541 /* Springfield */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -327,6 +327,14 @@
 				983C35531E870AD400087541 /* libVuforia.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		983C35551E871BD700087541 /* Springfield */ = {
+			isa = PBXGroup;
+			children = (
+				983C353B1E87032800087541 /* SpringfieldViewController.swift */,
+			);
+			name = Springfield;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -475,3 +475,10 @@ class CameraViewController: UIViewController {
     
 }
 
+extension CameraViewController: QuickViewDelegate {
+    func showPhoto(image: UIImage) {
+        if let quickViewController = QuickLookViewController.viewController() {
+            quickViewController
+        }
+    }
+}

@@ -74,6 +74,9 @@
                                 <constraint firstAttribute="height" constant="45" id="Ot3-sD-Ge5"/>
                                 <constraint firstAttribute="width" constant="45" id="wpt-mx-6XD"/>
                             </constraints>
+                            <connections>
+                                <action selector="displayThumbnail:" destination="LfL-VC-J2K" eventType="touchUpInside" id="6gH-av-nCQ"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29792774820000001" colorSpace="custom" customColorSpace="sRGB"/>

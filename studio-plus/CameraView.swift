@@ -8,7 +8,11 @@
 
 import UIKit
 
+protocol QuickViewDelegate {
+    func showPhoto(image: UIImage)
+}
 class CameraView: UIView {
+    var quickViewDelegate: QuickViewDelegate?
     @IBOutlet weak var camPreview: UIView!
     @IBOutlet weak var thumbnail: UIButton!
     @IBOutlet weak var hintButton: UIButton!
@@ -29,6 +33,9 @@ class CameraView: UIView {
         hintButton.isSelected = !hintButton.isSelected
     }
     
+    @IBAction func displayThumbnail(_ sender: Any) {
+        quickViewDelegate?.showPhoto()
+    }
     func configure(brandAssets: CameraBrandAssets) {
         if let defaultImage =  UIImage(named: brandAssets.hintImageDefaultName) {
             hintButton.setImage(defaultImage, for: .normal)

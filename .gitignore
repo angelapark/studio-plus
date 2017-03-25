@@ -133,3 +133,4 @@ Temporary Items
 
 ## Files that get created during git processes
 *.orig
+.DS_Store

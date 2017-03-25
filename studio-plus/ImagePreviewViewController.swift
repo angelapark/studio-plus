@@ -8,6 +8,7 @@ import UIKit
 
 class QuickLookViewController: UIViewController {
   
+
   @IBOutlet weak var quickLookImage: UIImageView!
   var photoImage: UIImage!
   
@@ -18,6 +19,10 @@ class QuickLookViewController: UIViewController {
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
+    
+    func viewController() {
+        return UIStoryboard(name: "QuickView", bundle: Bundle.main).instantiateInitialViewController() as? CameraViewController
+    }
   
   override var prefersStatusBarHidden : Bool {
     return true

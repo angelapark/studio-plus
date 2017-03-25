@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Franchise Home View Controller-->
+        <scene sceneID="xqJ-H4-U33">
+            <objects>
+                <viewController id="inZ-QZ-pJY" customClass="FranchiseHomeViewController" customModule="studio_plus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uT9-rP-jsb"/>
+                        <viewControllerLayoutGuide type="bottom" id="obz-Gb-2wT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dvh-BH-J0B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fM8-jx-3vE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfG-wK-hxj">
+                                <rect key="frame" x="0.0" y="398" width="375" height="269"/>
+                                <connections>
+                                    <action selector="navigateTo:" destination="inZ-QZ-pJY" eventType="touchUpInside" id="8Au-LQ-63T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuD-rU-MXr">
+                                <rect key="frame" x="16" y="20" width="84" height="30"/>
+                                <state key="normal" title="Back Button"/>
+                                <connections>
+                                    <action selector="navigateBack:" destination="inZ-QZ-pJY" eventType="touchUpInside" id="cne-aU-g6K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GuD-rU-MXr" firstAttribute="leading" secondItem="Dvh-BH-J0B" secondAttribute="leadingMargin" id="34L-jc-qFr"/>
+                            <constraint firstItem="AfG-wK-hxj" firstAttribute="trailing" secondItem="fM8-jx-3vE" secondAttribute="trailing" id="TI1-Iw-4CG"/>
+                            <constraint firstItem="AfG-wK-hxj" firstAttribute="leading" secondItem="fM8-jx-3vE" secondAttribute="leading" id="Z2k-T1-CwS"/>
+                            <constraint firstItem="AfG-wK-hxj" firstAttribute="bottom" secondItem="obz-Gb-2wT" secondAttribute="top" id="Z6T-8p-hLE"/>
+                            <constraint firstItem="fM8-jx-3vE" firstAttribute="top" secondItem="Dvh-BH-J0B" secondAttribute="top" id="dUl-mN-i7D"/>
+                            <constraint firstAttribute="trailing" secondItem="fM8-jx-3vE" secondAttribute="trailing" id="m2G-ET-bfV"/>
+                            <constraint firstItem="fM8-jx-3vE" firstAttribute="leading" secondItem="Dvh-BH-J0B" secondAttribute="leading" id="nbN-Da-IxV"/>
+                            <constraint firstItem="AfG-wK-hxj" firstAttribute="top" secondItem="uT9-rP-jsb" secondAttribute="bottom" constant="378" id="obH-Ho-1Fn"/>
+                            <constraint firstItem="GuD-rU-MXr" firstAttribute="top" secondItem="uT9-rP-jsb" secondAttribute="bottom" id="spF-L5-B4h"/>
+                            <constraint firstItem="fM8-jx-3vE" firstAttribute="bottom" secondItem="obz-Gb-2wT" secondAttribute="top" id="z1V-5f-iTX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="fM8-jx-3vE" id="CcC-9a-aKh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Da-86-Gbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-724" y="-75.112443778110944"/>
+        </scene>
+    </scenes>
+</document>

@@ -31,5 +31,11 @@ class ViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+
+    @IBAction func SegueToSpringfield(_ sender: Any) {
+        present(SpringfieldViewController(), animated: false, completion: nil)
+    }
+    
 
 }

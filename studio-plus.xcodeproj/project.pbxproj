@@ -52,13 +52,10 @@
 		983C35E81E872F3300087541 /* Tarmac.xml in Resources */ = {isa = PBXBuildFile; fileRef = 983C35E11E872F3300087541 /* Tarmac.xml */; };
 		983C35E91E872F3300087541 /* VuforiaSample.dat in Resources */ = {isa = PBXBuildFile; fileRef = 983C35E21E872F3300087541 /* VuforiaSample.dat */; };
 		983C35EA1E872F3300087541 /* VuforiaSample.xml in Resources */ = {isa = PBXBuildFile; fileRef = 983C35E31E872F3300087541 /* VuforiaSample.xml */; };
-		983C35F41E872F4200087541 /* bart.dae in Resources */ = {isa = PBXBuildFile; fileRef = 983C35ED1E872F4200087541 /* bart.dae */; };
-		983C35F51E872F4200087541 /* StonesAndChips.dat in Resources */ = {isa = PBXBuildFile; fileRef = 983C35EE1E872F4200087541 /* StonesAndChips.dat */; };
-		983C35F61E872F4200087541 /* StonesAndChips.xml in Resources */ = {isa = PBXBuildFile; fileRef = 983C35EF1E872F4200087541 /* StonesAndChips.xml */; };
-		983C35F71E872F4200087541 /* Tarmac.dat in Resources */ = {isa = PBXBuildFile; fileRef = 983C35F01E872F4200087541 /* Tarmac.dat */; };
-		983C35F81E872F4200087541 /* Tarmac.xml in Resources */ = {isa = PBXBuildFile; fileRef = 983C35F11E872F4200087541 /* Tarmac.xml */; };
 		983C35F91E872F4200087541 /* VuforiaSample.dat in Resources */ = {isa = PBXBuildFile; fileRef = 983C35F21E872F4200087541 /* VuforiaSample.dat */; };
 		983C35FA1E872F4200087541 /* VuforiaSample.xml in Resources */ = {isa = PBXBuildFile; fileRef = 983C35F31E872F4200087541 /* VuforiaSample.xml */; };
+		983C35FD1E8730F000087541 /* model_bart.dae in Resources */ = {isa = PBXBuildFile; fileRef = 983C35FB1E8730F000087541 /* model_bart.dae */; };
+		983C35FE1E8730F000087541 /* model_krusty.dae in Resources */ = {isa = PBXBuildFile; fileRef = 983C35FC1E8730F000087541 /* model_krusty.dae */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,13 +217,10 @@
 		983C35E11E872F3300087541 /* Tarmac.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tarmac.xml; sourceTree = "<group>"; };
 		983C35E21E872F3300087541 /* VuforiaSample.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = VuforiaSample.dat; sourceTree = "<group>"; };
 		983C35E31E872F3300087541 /* VuforiaSample.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = VuforiaSample.xml; sourceTree = "<group>"; };
-		983C35ED1E872F4200087541 /* bart.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = bart.dae; sourceTree = "<group>"; };
-		983C35EE1E872F4200087541 /* StonesAndChips.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = StonesAndChips.dat; sourceTree = "<group>"; };
-		983C35EF1E872F4200087541 /* StonesAndChips.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = StonesAndChips.xml; sourceTree = "<group>"; };
-		983C35F01E872F4200087541 /* Tarmac.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tarmac.dat; sourceTree = "<group>"; };
-		983C35F11E872F4200087541 /* Tarmac.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tarmac.xml; sourceTree = "<group>"; };
 		983C35F21E872F4200087541 /* VuforiaSample.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = VuforiaSample.dat; sourceTree = "<group>"; };
 		983C35F31E872F4200087541 /* VuforiaSample.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = VuforiaSample.xml; sourceTree = "<group>"; };
+		983C35FB1E8730F000087541 /* model_bart.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = model_bart.dae; sourceTree = "<group>"; };
+		983C35FC1E8730F000087541 /* model_krusty.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = model_krusty.dae; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -577,11 +571,8 @@
 		983C35EC1E872F4200087541 /* ImageTargets */ = {
 			isa = PBXGroup;
 			children = (
-				983C35ED1E872F4200087541 /* bart.dae */,
-				983C35EE1E872F4200087541 /* StonesAndChips.dat */,
-				983C35EF1E872F4200087541 /* StonesAndChips.xml */,
-				983C35F01E872F4200087541 /* Tarmac.dat */,
-				983C35F11E872F4200087541 /* Tarmac.xml */,
+				983C35FB1E8730F000087541 /* model_bart.dae */,
+				983C35FC1E8730F000087541 /* model_krusty.dae */,
 				983C35F21E872F4200087541 /* VuforiaSample.dat */,
 				983C35F31E872F4200087541 /* VuforiaSample.xml */,
 			);
@@ -699,26 +690,23 @@
 				981936F01E7B457900F8421C /* LaunchScreen.storyboard in Resources */,
 				983C35E41E872F3300087541 /* bart.dae in Resources */,
 				981937251E7B472C00F8421C /* Camera.storyboard in Resources */,
-				983C35F41E872F4200087541 /* bart.dae in Resources */,
 				983C35E61E872F3300087541 /* StonesAndChips.xml in Resources */,
 				4347A50C1E8701B4000D6CCB /* Camera.xib in Resources */,
 				983C35FA1E872F4200087541 /* VuforiaSample.xml in Resources */,
 				981936ED1E7B457900F8421C /* Assets.xcassets in Resources */,
 				983C35E91E872F3300087541 /* VuforiaSample.dat in Resources */,
 				981937211E7B471000F8421C /* ChooseAdventure.storyboard in Resources */,
-				983C35F51E872F4200087541 /* StonesAndChips.dat in Resources */,
 				983C35E81E872F3300087541 /* Tarmac.xml in Resources */,
 				981937291E7B477D00F8421C /* ParkMap.storyboard in Resources */,
 				983C35E51E872F3300087541 /* StonesAndChips.dat in Resources */,
-				983C35F71E872F4200087541 /* Tarmac.dat in Resources */,
 				9819372D1E7B479300F8421C /* LeaderBoard.storyboard in Resources */,
 				9819372F1E7B4A8600F8421C /* Main.storyboard in Resources */,
-				983C35F61E872F4200087541 /* StonesAndChips.xml in Resources */,
-				983C35F81E872F4200087541 /* Tarmac.xml in Resources */,
 				981937191E7B46B500F8421C /* Onboarding.storyboard in Resources */,
 				9819371D1E7B46EA00F8421C /* CreateProfile.storyboard in Resources */,
 				983C35EA1E872F3300087541 /* VuforiaSample.xml in Resources */,
 				983C35E71E872F3300087541 /* Tarmac.dat in Resources */,
+				983C35FD1E8730F000087541 /* model_bart.dae in Resources */,
+				983C35FE1E8730F000087541 /* model_krusty.dae in Resources */,
 				983C35F91E872F4200087541 /* VuforiaSample.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

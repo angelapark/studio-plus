@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qF-6R-w3M">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qF-6R-w3M" customClass="CameraView" customModule="studio_plus" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
@@ -29,7 +29,7 @@
                                 <constraint firstAttribute="width" constant="56" id="Nni-oC-6bt"/>
                                 <constraint firstAttribute="height" constant="48" id="w5v-3g-A00"/>
                             </constraints>
-                            <state key="normal" image="Camera_Icon"/>
+                            <state key="normal" image="simpsons-camera-switch"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oD-MI-q22">
                             <rect key="frame" x="0.0" y="0.0" width="56" height="48"/>
@@ -37,22 +37,10 @@
                                 <constraint firstAttribute="height" constant="48" id="iyF-4q-3yy"/>
                                 <constraint firstAttribute="width" constant="56" id="o4e-sv-2XT"/>
                             </constraints>
-                            <state key="normal" image="Flash_Icon"/>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Off" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEI-4x-CRP">
-                            <rect key="frame" x="42" y="13" width="42" height="21"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="42" id="Pjx-G7-HaR"/>
-                                <constraint firstAttribute="height" constant="21" id="aP8-LM-oID"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="PEI-4x-CRP" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" constant="13" id="6RA-qX-0tN"/>
                         <constraint firstAttribute="bottom" secondItem="5oD-MI-q22" secondAttribute="bottom" id="D2V-4l-0Vt"/>
                         <constraint firstAttribute="bottom" secondItem="J4l-hX-7ja" secondAttribute="bottom" id="FwF-5C-HOC"/>
                         <constraint firstItem="J4l-hX-7ja" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" id="IT7-ei-4NW"/>
@@ -60,11 +48,9 @@
                         <constraint firstItem="5oD-MI-q22" firstAttribute="leading" secondItem="YMM-I9-avA" secondAttribute="leading" id="QcV-UF-2D5"/>
                         <constraint firstAttribute="trailing" secondItem="J4l-hX-7ja" secondAttribute="trailing" id="VxV-jF-t8N"/>
                         <constraint firstAttribute="trailing" secondItem="J4l-hX-7ja" secondAttribute="trailing" id="Vy5-N9-t3I"/>
-                        <constraint firstAttribute="bottom" secondItem="PEI-4x-CRP" secondAttribute="bottom" constant="14" id="b4E-Wn-G9p"/>
                         <constraint firstAttribute="bottom" secondItem="J4l-hX-7ja" secondAttribute="bottom" id="cZ5-L9-4bf"/>
                         <constraint firstItem="J4l-hX-7ja" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" id="lKR-au-YE4"/>
                         <constraint firstItem="5oD-MI-q22" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" id="mc0-Qo-do6"/>
-                        <constraint firstItem="PEI-4x-CRP" firstAttribute="leading" secondItem="YMM-I9-avA" secondAttribute="leading" constant="42" id="p3z-Ob-6On"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkp-6O-f3g" userLabel="Bottom Controls">
@@ -75,7 +61,7 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="CPc-H8-2Ba"/>
                             </constraints>
-                            <state key="normal" image="Capture_Butt"/>
+                            <state key="normal" image="hp-camera-button"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bj1-VP-LfK">
                             <rect key="frame" x="36" y="25" width="45" height="45"/>
@@ -111,11 +97,16 @@
                 <constraint firstAttribute="trailing" secondItem="8qF-6R-w3M" secondAttribute="trailing" id="sIn-yg-aov"/>
                 <constraint firstAttribute="trailing" secondItem="Qkp-6O-f3g" secondAttribute="trailing" id="yS5-er-06k"/>
             </constraints>
+            <connections>
+                <outlet property="camPreview" destination="8qF-6R-w3M" id="DgX-hL-88n"/>
+                <outlet property="hintButton" destination="5oD-MI-q22" id="3Kt-5N-zMq"/>
+                <outlet property="thumbnail" destination="Bj1-VP-LfK" id="Iet-E4-b6P"/>
+            </connections>
+            <point key="canvasLocation" x="62.5" y="67.5"/>
         </view>
     </objects>
     <resources>
-        <image name="Camera_Icon" width="16" height="16"/>
-        <image name="Capture_Butt" width="16" height="16"/>
-        <image name="Flash_Icon" width="16" height="16"/>
+        <image name="hp-camera-button" width="168" height="168"/>
+        <image name="simpsons-camera-switch" width="94" height="72"/>
     </resources>
 </document>

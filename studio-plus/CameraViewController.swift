@@ -10,8 +10,19 @@ import UIKit
 import AVFoundation
 import Photos
 
+struct CameraBrandAssets {
+    let hintImageDefaultName: String
+    let hintImageActivatedName: String
+}
+
 class CameraViewController: UIViewController {
-    var cameraView: CameraView?
+    var cameraView: CameraView? {
+        didSet {
+            if let brandAssets = brandAssets, let cameraView = cameraView {
+                cameraView.configure(brandAssets: brandAssets)
+            }
+        }
+    }
     let captureSession = AVCaptureSession()
     let imageOutput = AVCaptureStillImageOutput()
     var previewLayer: AVCaptureVideoPreviewLayer!
@@ -22,7 +33,16 @@ class CameraViewController: UIViewController {
     var resetMarker: UIImageView!
     fileprivate var adjustingExposureContext: String = ""
     
-
+    var brandAssets: CameraBrandAssets? {
+        didSet {
+            if let brandAssets = brandAssets {
+                cameraView?.configure(brandAssets: brandAssets)
+            }
+        }
+    }
+    static func viewController() -> CameraViewController? {
+        return UIStoryboard(name: "Camera", bundle: Bundle.main).instantiateInitialViewController() as? CameraViewController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

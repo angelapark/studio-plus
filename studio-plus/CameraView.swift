@@ -19,6 +19,16 @@ class CameraView: UIView {
         return UINib(nibName: "Camera", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
 
+    @IBAction func switchCameras(_ sender: AnyObject) {
+        switchCameras?()
+    }
+
+    var switchCameras: (()-> Void)?
+    
+    @IBAction func toggleHint(_ sender: UIButton) {
+        hintButton.isSelected = !hintButton.isSelected
+    }
+    
     func configure(brandAssets: CameraBrandAssets) {
         if let defaultImage =  UIImage(named: brandAssets.hintImageDefaultName) {
             hintButton.setImage(defaultImage, for: .normal)

@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
+    static let hogsmeadeBrandAssets = CameraBrandAssets(hintImageDefaultName: "hp-camera-hint-default", hintImageActivatedName: "hp-camera-hint-activated")
+
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,8 +21,9 @@ class ViewController: UIViewController {
 
     @IBAction func enterHogsmeade(_ sender: Any) {
         
-        if let cameraView = CameraViewController.viewController() {
-            present(cameraView, animated: true, completion: nil)
+        if let cameraViewController = CameraViewController.viewController() {
+            cameraViewController.brandAssets = ViewController.hogsmeadeBrandAssets
+            present(cameraViewController, animated: true, completion: nil)
         }
     }
     override func didReceiveMemoryWarning() {

@@ -13,6 +13,11 @@ import Photos
 struct CameraBrandAssets {
     let hintImageDefaultName: String
     let hintImageActivatedName: String
+    
+    init(hintImageDefaultName: String, hintImageActivatedName: String) {
+        self.hintImageDefaultName = hintImageDefaultName
+        self.hintImageActivatedName = hintImageActivatedName
+    }
 }
 
 class CameraViewController: UIViewController {
@@ -47,6 +52,48 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let cameraView = CameraView.instanceFromNib() as? CameraView {
+            cameraView.switchCameras = { [weak self] in
+                guard let this = self else {
+                    return
+                }
+                // Make sure the device has more than 1 camera.
+                if AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo).count > 1 {
+                    // Check which position the active camera is.
+                    var newPosition: AVCaptureDevicePosition!
+                    if this.activeInput.device.position == AVCaptureDevicePosition.back {
+                        newPosition = AVCaptureDevicePosition.front
+                    } else {
+                        newPosition = AVCaptureDevicePosition.back
+                    }
+                    
+                    // Get camera at new position.
+                    var newCamera: AVCaptureDevice!
+                    let devices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo)
+                    for device in devices! {
+                        if (device as AnyObject).position == newPosition {
+                            newCamera = device as! AVCaptureDevice
+                        }
+                    }
+                    
+                    // Create new input and update capture session.
+                    do {
+                        let input = try AVCaptureDeviceInput(device: newCamera)
+                        this.captureSession.beginConfiguration()
+                        // Remove input for active camera.
+                        this.captureSession.removeInput(this.activeInput)
+                        // Add input for new camera.
+                        if this.captureSession.canAddInput(input) == true {
+                            this.captureSession.addInput(input)
+                           this.activeInput = input
+                        } else {
+                            this.captureSession.addInput(this.activeInput)
+                        }
+                        this.captureSession.commitConfiguration()
+                    } catch {
+                        print("Error switching cameras: \(error)")
+                    }
+                }
+            }
             self.cameraView = cameraView
             view.addSubview(cameraView)
         }
@@ -146,46 +193,7 @@ class CameraViewController: UIViewController {
     }
     
     // MARK: - Configure
-    @IBAction func switchCameras(_ sender: AnyObject) {
-        // Make sure the device has more than 1 camera.
-        if AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo).count > 1 {
-            // Check which position the active camera is.
-            var newPosition: AVCaptureDevicePosition!
-            if activeInput.device.position == AVCaptureDevicePosition.back {
-                newPosition = AVCaptureDevicePosition.front
-            } else {
-                newPosition = AVCaptureDevicePosition.back
-            }
-            
-            // Get camera at new position.
-            var newCamera: AVCaptureDevice!
-            let devices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo)
-            for device in devices! {
-                if (device as AnyObject).position == newPosition {
-                    newCamera = device as! AVCaptureDevice
-                }
-            }
-            
-            // Create new input and update capture session.
-            do {
-                let input = try AVCaptureDeviceInput(device: newCamera)
-                captureSession.beginConfiguration()
-                // Remove input for active camera.
-                captureSession.removeInput(activeInput)
-                // Add input for new camera.
-                if captureSession.canAddInput(input) {
-                    captureSession.addInput(input)
-                    activeInput = input
-                } else {
-                    captureSession.addInput(activeInput)
-                }
-                captureSession.commitConfiguration()
-            } catch {
-                print("Error switching cameras: \(error)")
-            }
-        }
-    }
-    
+
     // MARK: Focus Methods
     func tapToFocus(_ recognizer: UIGestureRecognizer) {
 //        guard let camPreview = cameraView?.camPreview else {

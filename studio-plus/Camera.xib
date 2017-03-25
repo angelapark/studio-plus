@@ -30,18 +30,22 @@
                                 <constraint firstAttribute="height" constant="48" id="w5v-3g-A00"/>
                             </constraints>
                             <state key="normal" image="simpsons-camera-switch"/>
+                            <connections>
+                                <action selector="switchCameras:" destination="LfL-VC-J2K" eventType="touchUpInside" id="htQ-yK-piP"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oD-MI-q22">
-                            <rect key="frame" x="0.0" y="0.0" width="56" height="48"/>
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="48" id="iyF-4q-3yy"/>
-                                <constraint firstAttribute="width" constant="56" id="o4e-sv-2XT"/>
+                                <constraint firstAttribute="height" constant="50" id="qbs-G1-s1x"/>
                             </constraints>
+                            <connections>
+                                <action selector="toggleHint:" destination="LfL-VC-J2K" eventType="touchUpInside" id="GfP-sJ-ZJT"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="5oD-MI-q22" secondAttribute="bottom" id="D2V-4l-0Vt"/>
                         <constraint firstAttribute="bottom" secondItem="J4l-hX-7ja" secondAttribute="bottom" id="FwF-5C-HOC"/>
                         <constraint firstItem="J4l-hX-7ja" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" id="IT7-ei-4NW"/>
                         <constraint firstAttribute="height" constant="48" id="LOd-QG-wiv"/>
@@ -91,15 +95,16 @@
                 <constraint firstItem="Qkp-6O-f3g" firstAttribute="leading" secondItem="LfL-VC-J2K" secondAttribute="leading" id="L57-B2-PHF"/>
                 <constraint firstItem="8qF-6R-w3M" firstAttribute="top" secondItem="LfL-VC-J2K" secondAttribute="top" id="LWj-d4-OAc"/>
                 <constraint firstAttribute="trailing" secondItem="YMM-I9-avA" secondAttribute="trailing" id="S33-HC-LeL"/>
+                <constraint firstItem="8qF-6R-w3M" firstAttribute="trailing" secondItem="YMM-I9-avA" secondAttribute="trailing" id="Y3k-pB-RK1"/>
                 <constraint firstAttribute="bottom" secondItem="8qF-6R-w3M" secondAttribute="bottom" id="hAl-oY-lLv"/>
                 <constraint firstItem="8qF-6R-w3M" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" id="kdv-af-l5X"/>
                 <constraint firstItem="8qF-6R-w3M" firstAttribute="leading" secondItem="LfL-VC-J2K" secondAttribute="leading" id="oAQ-U7-gf2"/>
-                <constraint firstAttribute="trailing" secondItem="8qF-6R-w3M" secondAttribute="trailing" id="sIn-yg-aov"/>
                 <constraint firstAttribute="trailing" secondItem="Qkp-6O-f3g" secondAttribute="trailing" id="yS5-er-06k"/>
             </constraints>
             <connections>
                 <outlet property="camPreview" destination="8qF-6R-w3M" id="DgX-hL-88n"/>
                 <outlet property="hintButton" destination="5oD-MI-q22" id="3Kt-5N-zMq"/>
+                <outlet property="switchCameraButton" destination="J4l-hX-7ja" id="bgo-DH-6eC"/>
                 <outlet property="thumbnail" destination="Bj1-VP-LfK" id="Iet-E4-b6P"/>
             </connections>
             <point key="canvasLocation" x="62.5" y="67.5"/>

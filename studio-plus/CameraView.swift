@@ -25,6 +25,7 @@ class CameraView: UIView {
     @IBOutlet weak var switchCameraButton: UIButton!
     
     //MARK - Properties
+    var catEars: UIImageView?
     let captureSession = AVCaptureSession()
     let imageOutput = AVCaptureStillImageOutput()
     var previewLayer: AVCaptureVideoPreviewLayer!
@@ -79,6 +80,7 @@ class CameraView: UIView {
             }
         }
     }
+    
     func toggleHint(toSelected: Bool? = nil) {
         let isSelected = toSelected ?? !hintButton.isSelected
         hintButton.isSelected = isSelected
@@ -89,6 +91,19 @@ class CameraView: UIView {
         toggleHint()
         delegate?.toggleHint()
         
+    }
+    
+    func drawCatEars(image: UIImage) -> UIImage? {
+        let catEarsImage = UIImage(named: "catears")
+        let width = (catEars!.frame.size.width / self.frame.size.width) * image.size.width
+        let height = (catEars!.frame.size.height / self.frame.size.height) * image.size.height
+        let size = CGSize (width: width, height: height)
+        UIGraphicsBeginImageContextWithOptions(image.size, true, 0.0)
+        image.draw(at: CGPoint(x: 0, y: 0))
+        catEarsImage?.draw(in: CGRect(origin: catEars!.frame.origin, size: size))
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return scaledImage
     }
     
     @IBAction func displayThumbnail(_ sender: Any) {
@@ -166,8 +181,11 @@ class CameraView: UIView {
         imageOutput.captureStillImageAsynchronously(from: connection, completionHandler: { (sampleBuffer, error) in
             if sampleBuffer != nil {
                 let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
-                let image = UIImage(data: imageData!)
-                self.savePhotoToLibrary(image!)
+                
+                if let image = UIImage(data: imageData!), let catImage = self.drawCatEars(image: image) {
+                    self.savePhotoToLibrary(catImage)
+                }
+        
             } else {
                 print("Error capturing photo: \(error?.localizedDescription)")
             }

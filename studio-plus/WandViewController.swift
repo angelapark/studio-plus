@@ -56,6 +56,7 @@ class WandViewController: CameraViewController {
         if recognizer.state.rawValue == 3 {
             view.bringSubview(toFront: catEars)
             catEars.isHidden = false
+            cameraView?.catEars = catEars
         }
     }
 

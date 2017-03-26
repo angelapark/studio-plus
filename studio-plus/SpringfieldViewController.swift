@@ -254,4 +254,10 @@ extension SpringfieldViewController: CameraViewDelegate {
     func toggleHint() {
         //no-op
     }
+    
+    func backToMap() {
+        if ((self.presentingViewController) != nil){
+            self.dismiss(animated: false, completion: nil)
+        }
+    }
 }

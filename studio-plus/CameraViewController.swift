@@ -87,4 +87,10 @@ extension CameraViewController: CameraViewDelegate {
     func toggleHint() {
         
     }
+    
+    func backToMap() {
+        if ((self.presentingViewController) != nil){
+            self.dismiss(animated: false, completion: nil)
+        }
+    }
 }

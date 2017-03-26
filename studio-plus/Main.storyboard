@@ -21,41 +21,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfc-6j-Bka">
-                                <rect key="frame" x="169" y="39" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L7S-KC-m1j">
-                                <rect key="frame" x="68" y="293" width="238" height="128"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqf-Rv-muA">
-                                        <rect key="frame" x="0.0" y="0.0" width="238" height="59"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="59" id="ZR4-nb-P3D"/>
-                                            <constraint firstAttribute="width" constant="238" id="pZk-ka-o0L"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="hp-enter-button"/>
-                                        <connections>
-                                            <action selector="enterHogsmeade:" destination="XWf-Pm-CEw" eventType="touchUpInside" id="g7x-IN-d7t"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDV-YG-aCi">
-                                        <rect key="frame" x="0.0" y="69" width="238" height="59"/>
-                                        <state key="normal" backgroundImage="simpsons-enter-button"/>
-                                        <connections>
-                                            <action selector="SegueToSpringfield:" destination="XWf-Pm-CEw" eventType="touchUpInside" id="mdJ-Jl-WSu"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="00_LaunchScreen2" translatesAutoresizingMaskIntoConstraints="NO" id="KH1-LS-l6N">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sw5-uR-nRc">
+                                <rect key="frame" x="88" y="554" width="200" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="sch-Rc-Vqi"/>
+                                    <constraint firstAttribute="width" constant="200" id="u9Q-WH-he8"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="enter-button"/>
+                                <connections>
+                                    <segue destination="rNL-bd-5u6" kind="show" id="gPc-Ze-wnY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="L7S-KC-m1j" firstAttribute="centerX" secondItem="ZQL-mb-U6m" secondAttribute="centerX" id="JxP-1X-eZO"/>
-                            <constraint firstItem="L7S-KC-m1j" firstAttribute="centerY" secondItem="ZQL-mb-U6m" secondAttribute="centerY" id="lLp-AG-2ou"/>
+                            <constraint firstItem="KH1-LS-l6N" firstAttribute="leading" secondItem="ZQL-mb-U6m" secondAttribute="leading" id="5hb-7t-Yle"/>
+                            <constraint firstItem="sAA-mV-s3u" firstAttribute="top" secondItem="sw5-uR-nRc" secondAttribute="bottom" constant="55" id="BVY-cG-bVH"/>
+                            <constraint firstItem="KH1-LS-l6N" firstAttribute="centerX" secondItem="sw5-uR-nRc" secondAttribute="centerX" id="SKI-Au-H5N"/>
+                            <constraint firstItem="KH1-LS-l6N" firstAttribute="bottom" secondItem="sAA-mV-s3u" secondAttribute="top" id="UB3-sT-NsF"/>
+                            <constraint firstItem="sw5-uR-nRc" firstAttribute="centerX" secondItem="ZQL-mb-U6m" secondAttribute="centerX" id="p5F-qI-h13"/>
+                            <constraint firstItem="KH1-LS-l6N" firstAttribute="top" secondItem="ZQL-mb-U6m" secondAttribute="top" id="ssI-Xo-qLb"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -63,9 +51,17 @@
             </objects>
             <point key="canvasLocation" x="-156" y="103.89805097451276"/>
         </scene>
+        <!--ChooseAdventure-->
+        <scene sceneID="bR3-zc-8Fv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChooseAdventure" id="rNL-bd-5u6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbL-po-e1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="264"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="hp-enter-button" width="540" height="134"/>
-        <image name="simpsons-enter-button" width="540" height="134"/>
+        <image name="00_LaunchScreen2" width="750" height="1334"/>
+        <image name="enter-button" width="540" height="134"/>
     </resources>
 </document>

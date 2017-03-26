@@ -57,6 +57,8 @@
 		983C35FA1E872F4200087541 /* VuforiaSample.xml in Resources */ = {isa = PBXBuildFile; fileRef = 983C35F31E872F4200087541 /* VuforiaSample.xml */; };
 		983C35FD1E8730F000087541 /* model_bart.dae in Resources */ = {isa = PBXBuildFile; fileRef = 983C35FB1E8730F000087541 /* model_bart.dae */; };
 		983C35FE1E8730F000087541 /* model_krusty.dae in Resources */ = {isa = PBXBuildFile; fileRef = 983C35FC1E8730F000087541 /* model_krusty.dae */; };
+		983C36021E87C8A600087541 /* CameraViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 983C36011E87C8A600087541 /* CameraViewController.storyboard */; };
+		983C36041E87C91500087541 /* SpringfieldViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 983C36031E87C91500087541 /* SpringfieldViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,6 +225,8 @@
 		983C35F31E872F4200087541 /* VuforiaSample.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = VuforiaSample.xml; sourceTree = "<group>"; };
 		983C35FB1E8730F000087541 /* model_bart.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = model_bart.dae; sourceTree = "<group>"; };
 		983C35FC1E8730F000087541 /* model_krusty.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = model_krusty.dae; sourceTree = "<group>"; };
+		983C36011E87C8A600087541 /* CameraViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CameraViewController.storyboard; sourceTree = "<group>"; };
+		983C36031E87C91500087541 /* SpringfieldViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SpringfieldViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,13 +338,15 @@
 				9819371E1E7B470800F8421C /* ChooseAdventureViewController.swift */,
 				981937201E7B471000F8421C /* ChooseAdventure.storyboard */,
 				981937221E7B472500F8421C /* CameraViewController.swift */,
+				983C36011E87C8A600087541 /* CameraViewController.storyboard */,
 				981937241E7B472C00F8421C /* Camera.storyboard */,
 				981937261E7B476100F8421C /* ParkMapViewController.swift */,
 				43EBA4A81E87355D003E65A3 /* QuickView.storyboard */,
 				981937281E7B477D00F8421C /* ParkMap.storyboard */,
 				9819372A1E7B478B00F8421C /* LeaderBoardViewController.swift */,
 				9819372C1E7B479300F8421C /* LeaderBoard.storyboard */,
-				983C35551E871BD700087541 /* Springfield */,
+				983C353B1E87032800087541 /* SpringfieldViewController.swift */,
+				983C36031E87C91500087541 /* SpringfieldViewController.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -382,14 +388,6 @@
 				983C35531E870AD400087541 /* libVuforia.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		983C35551E871BD700087541 /* Springfield */ = {
-			isa = PBXGroup;
-			children = (
-				983C353B1E87032800087541 /* SpringfieldViewController.swift */,
-			);
-			name = Springfield;
 			sourceTree = "<group>";
 		};
 		983C35711E872E8500087541 /* VuforiaManager */ = {
@@ -699,11 +697,13 @@
 				983C35FA1E872F4200087541 /* VuforiaSample.xml in Resources */,
 				981936ED1E7B457900F8421C /* Assets.xcassets in Resources */,
 				983C35E91E872F3300087541 /* VuforiaSample.dat in Resources */,
+				983C36041E87C91500087541 /* SpringfieldViewController.storyboard in Resources */,
 				981937211E7B471000F8421C /* ChooseAdventure.storyboard in Resources */,
 				983C35E81E872F3300087541 /* Tarmac.xml in Resources */,
 				981937291E7B477D00F8421C /* ParkMap.storyboard in Resources */,
 				983C35E51E872F3300087541 /* StonesAndChips.dat in Resources */,
 				9819372D1E7B479300F8421C /* LeaderBoard.storyboard in Resources */,
+				983C36021E87C8A600087541 /* CameraViewController.storyboard in Resources */,
 				9819372F1E7B4A8600F8421C /* Main.storyboard in Resources */,
 				981937191E7B46B500F8421C /* Onboarding.storyboard in Resources */,
 				9819371D1E7B46EA00F8421C /* CreateProfile.storyboard in Resources */,

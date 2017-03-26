@@ -23,7 +23,7 @@
                     <rect key="frame" x="15" y="30" width="345" height="48"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4l-hX-7ja">
-                            <rect key="frame" x="305" y="10" width="40" height="30"/>
+                            <rect key="frame" x="305" y="9" width="40" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="Nni-oC-6bt"/>
                                 <constraint firstAttribute="width" secondItem="J4l-hX-7ja" secondAttribute="height" multiplier="8:6" id="kDr-59-Scb"/>
@@ -34,7 +34,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oD-MI-q22">
-                            <rect key="frame" x="0.0" y="10" width="30" height="30"/>
+                            <rect key="frame" x="0.0" y="9" width="30" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="5oD-MI-q22" secondAttribute="height" multiplier="1:1" id="3PR-fg-qt9"/>
                             </constraints>
@@ -55,6 +55,17 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkp-6O-f3g" userLabel="Bottom Controls">
                     <rect key="frame" x="0.0" y="571" width="375" height="96"/>
                     <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYk-CH-3y7">
+                            <rect key="frame" x="15" y="28" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="a4R-lQ-Bkn"/>
+                                <constraint firstAttribute="width" secondItem="VYk-CH-3y7" secondAttribute="height" multiplier="1:1" id="wjT-Ey-Rpt"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="back-map-button"/>
+                            <connections>
+                                <action selector="backToMap:" destination="LfL-VC-J2K" eventType="touchUpInside" id="gZS-Hd-qa1"/>
+                            </connections>
+                        </button>
                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cz-RU-Qkm">
                             <rect key="frame" x="158" y="18" width="60" height="60"/>
                             <constraints>
@@ -67,7 +78,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bj1-VP-LfK">
-                            <rect key="frame" x="36" y="25" width="45" height="45"/>
+                            <rect key="frame" x="315" y="25" width="45" height="45"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="Ot3-sD-Ge5"/>
@@ -80,10 +91,11 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="9cz-RU-Qkm" firstAttribute="centerX" secondItem="Qkp-6O-f3g" secondAttribute="centerX" id="4fr-DI-aOf"/>
+                        <constraint firstItem="VYk-CH-3y7" firstAttribute="centerY" secondItem="Qkp-6O-f3g" secondAttribute="centerY" id="SAn-KR-XqT"/>
                         <constraint firstAttribute="height" constant="96" id="deE-qf-uTJ"/>
                         <constraint firstItem="9cz-RU-Qkm" firstAttribute="centerY" secondItem="Qkp-6O-f3g" secondAttribute="centerY" id="lBz-Lx-enR"/>
-                        <constraint firstItem="Bj1-VP-LfK" firstAttribute="leading" secondItem="Qkp-6O-f3g" secondAttribute="leading" constant="36" id="n7S-ea-GYV"/>
                         <constraint firstItem="Bj1-VP-LfK" firstAttribute="centerY" secondItem="Qkp-6O-f3g" secondAttribute="centerY" id="nIP-EV-Kqo"/>
+                        <constraint firstItem="VYk-CH-3y7" firstAttribute="leading" secondItem="Qkp-6O-f3g" secondAttribute="leading" constant="15" id="oBy-KA-gQb"/>
                     </constraints>
                 </view>
             </subviews>
@@ -92,6 +104,7 @@
                 <constraint firstItem="8qF-6R-w3M" firstAttribute="bottom" secondItem="Qkp-6O-f3g" secondAttribute="bottom" id="HZM-0q-2sN"/>
                 <constraint firstItem="Qkp-6O-f3g" firstAttribute="leading" secondItem="LfL-VC-J2K" secondAttribute="leading" id="L57-B2-PHF"/>
                 <constraint firstItem="8qF-6R-w3M" firstAttribute="top" secondItem="LfL-VC-J2K" secondAttribute="top" id="LWj-d4-OAc"/>
+                <constraint firstAttribute="trailing" secondItem="Bj1-VP-LfK" secondAttribute="trailing" constant="15" id="MFm-wG-IuO"/>
                 <constraint firstAttribute="trailing" secondItem="YMM-I9-avA" secondAttribute="trailing" constant="15" id="S33-HC-LeL"/>
                 <constraint firstAttribute="bottom" secondItem="8qF-6R-w3M" secondAttribute="bottom" id="hAl-oY-lLv"/>
                 <constraint firstItem="8qF-6R-w3M" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" constant="-30" id="kdv-af-l5X"/>
@@ -109,6 +122,7 @@
         </view>
     </objects>
     <resources>
+        <image name="back-map-button" width="100" height="92"/>
         <image name="hp-camera-button" width="168" height="168"/>
         <image name="simpsons-camera-switch" width="94" height="72"/>
     </resources>

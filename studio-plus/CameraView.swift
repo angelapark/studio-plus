@@ -13,6 +13,7 @@ import Photos
 protocol CameraViewDelegate {
     func showPhoto(image: UIImage)
     func toggleHint()
+    func backToMap()
 }
 
 class CameraView: UIView {
@@ -96,6 +97,10 @@ class CameraView: UIView {
         }
     
         delegate?.showPhoto(image: image)
+    }
+    
+    @IBAction func backToMap(_ sender: Any) {
+        delegate?.backToMap()
     }
 
     func configure(brandAssets: CameraBrandAssets) {

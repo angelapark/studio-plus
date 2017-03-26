@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "studio-plus/CameraView.swift"
-            timestampString = "512213049.929596"
+            timestampString = "512240919.530229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "switchCameras(_:)"
             landmarkType = "7">
          </BreakpointContent>

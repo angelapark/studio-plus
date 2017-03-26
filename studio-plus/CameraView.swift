@@ -170,7 +170,7 @@ class CameraView: UIView {
     }
     
     func videoQueue() -> DispatchQueue {
-        return DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default)
+        return DispatchQueue.global()
     }
     
     func setupPreview() {

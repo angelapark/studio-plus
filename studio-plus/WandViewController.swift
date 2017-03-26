@@ -13,7 +13,6 @@ class WandViewController: CameraViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -44,6 +43,16 @@ class WandViewController: CameraViewController {
             })
         })
     }
+    
+    @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
+        let translation = recognizer.translation(in: self.view)
+        if let view = recognizer.view {
+            view.center = CGPoint(x:view.center.x + translation.x,
+                                  y:view.center.y + translation.y)
+        }
+        recognizer.setTranslation(CGPoint.zero, in: self.view)
+    }
+
     /*
     // MARK: - Navigation
 
@@ -53,5 +62,8 @@ class WandViewController: CameraViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    override func toggleHint() {
+        wandGuide.alpha = 0.5
+        wandGuide.isHidden = !wandGuide.isHidden
+    }
 }

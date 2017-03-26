@@ -21,16 +21,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hp-camera-wand" translatesAutoresizingMaskIntoConstraints="NO" id="WgU-h7-pVO">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hp-camera-wand" translatesAutoresizingMaskIntoConstraints="NO" id="WgU-h7-pVO">
                                 <rect key="frame" x="171" y="380" width="33" height="160"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="33" id="weh-Rs-Vef"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="sPJ-1h-ifa" appends="YES" id="tD3-u0-ja9"/>
+                                </connections>
                             </imageView>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hp-camera-guide" translatesAutoresizingMaskIntoConstraints="NO" id="goN-tE-o2Y">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,6 +58,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AuZ-M0-hHS" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="sPJ-1h-ifa">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="vvl-dR-GuK" id="n4p-Ps-a1E"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-31.199999999999999" y="134.48275862068968"/>
         </scene>

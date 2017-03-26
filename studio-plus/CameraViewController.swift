@@ -21,8 +21,6 @@ struct CameraBrandAssets {
 }
 
 class CameraViewController: UIViewController {
-    
-    
     var cameraView: CameraView? {
         didSet {
             if let brandAssets = brandAssets, let cameraView = cameraView {

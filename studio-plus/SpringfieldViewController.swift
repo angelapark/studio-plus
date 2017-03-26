@@ -15,7 +15,8 @@ class SpringfieldViewController: UIViewController {
     let vuforiaDataSetFile = "VuforiaSample.xml"
     
     var vuforiaManager: VuforiaManager? = nil
-    var cameraVC: CameraViewController?
+    var cameraView: CameraView?
+    var arImage: UIImage?
     
     let boxMaterial = SCNMaterial()
     fileprivate var lastSceneName: String? = nil
@@ -28,6 +29,12 @@ class SpringfieldViewController: UIViewController {
         super.viewDidLoad()
         
         prepare()
+        
+        if let cameraView = CameraView.instanceFromNib() as? CameraView {
+            self.cameraView = cameraView
+            view.addSubview(cameraView)
+            cameraView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,34 +42,17 @@ class SpringfieldViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        startCameraSession()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        do {
-            try vuforiaManager?.stop()
-        } catch let error {
-            print("\(error)")
+        stop()
+    }
+    
+    func showPhoto(image: UIImage) {
+        if let quickViewController = QuickLookViewController.viewController() {
+            quickViewController.photoImage = image
+            present(quickViewController, animated: true)
         }
-    }
-    
-    func startCameraSession() {
-        // camera session
-    }
-    
-    // camera button
-    @IBAction func didTakePhoto(_ sender: UIButton) {
-        
     }
 }
 
@@ -85,12 +75,6 @@ private extension SpringfieldViewController {
                                        name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         
         vuforiaManager?.prepare(with: .portrait)
-        
-        cameraVC = CameraViewController()
-        self.addChildViewController(cameraVC!)
-//        cameraVC?.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-//        self.view.addSubview((cameraVC?.view)!)
-//        cameraVC?.didMove(toParentViewController: self)
     }
     
     func pause() {
@@ -109,9 +93,21 @@ private extension SpringfieldViewController {
         }
     }
     
-    // switch cameras
-    func switchCamera() {
-        vuforiaManager?.setFrontCameraEnabled(true)
+    func stop() {
+        do {
+            try vuforiaManager?.stop()
+        } catch let error {
+            print("\(error)")
+        }
+    }
+    
+    func start() {
+        do {
+            try vuforiaManager?.start()
+            vuforiaManager?.setContinuousAutofocusEnabled(true)
+        }catch let error {
+            print("\(error)")
+        }
     }
 }
 
@@ -129,12 +125,7 @@ extension SpringfieldViewController: VuforiaManagerDelegate {
     func vuforiaManagerDidFinishPreparing(_ manager: VuforiaManager!) {
         print("did finish preparing\n")
         
-        do {
-            try vuforiaManager?.start()
-            vuforiaManager?.setContinuousAutofocusEnabled(true)
-        }catch let error {
-            print("\(error)")
-        }
+        start()
     }
     
     func vuforiaManager(_ manager: VuforiaManager!, didFailToPreparingWithError error: Error!) {
@@ -163,7 +154,7 @@ extension SpringfieldViewController: VuforiaEAGLViewSceneSource, VuforiaEAGLView
     func scene(for view: VuforiaEAGLView!, userInfo: [String : Any]?) -> SCNScene! {
         guard let userInfo = userInfo else {
             print("default scene")
-            return createKwikEMartScene(with: view, character: "Bart")
+            return createKwikEMartScene(with: view, character: "krusty")
         }
         
         // switch out characters
@@ -172,7 +163,7 @@ extension SpringfieldViewController: VuforiaEAGLViewSceneSource, VuforiaEAGLView
             return createKwikEMartScene(with: view, character: "krusty")
         } else {
             print("another scene")
-            return createKwikEMartScene(with: view, character: "bart")
+            return createKwikEMartScene(with: view, character: "krusty")
         }
     }
     
@@ -207,7 +198,13 @@ extension SpringfieldViewController: VuforiaEAGLViewSceneSource, VuforiaEAGLView
     
     func vuforiaEAGLView(_ view: VuforiaEAGLView!, didTouchDownNode node: SCNNode!) {
         print("touch down \(node.name)\n")
-        boxMaterial.transparency = 0.6
+        cameraView?.removeFromSuperview()
+        UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, false, UIScreen.main.scale)
+        self.view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        showPhoto(image: image)
+
     }
     
     func vuforiaEAGLView(_ view: VuforiaEAGLView!, didTouchUp node: SCNNode!) {

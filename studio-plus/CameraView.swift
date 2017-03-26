@@ -144,7 +144,7 @@ class CameraView: UIView {
     
     @IBAction func capturePhoto(_ sender: AnyObject) {
         let connection = imageOutput.connection(withMediaType: AVMediaTypeVideo)
-        if (connection?.isVideoOrientationSupported)! {
+        if (connection?.isVideoOrientationSupported) == true {
             connection?.videoOrientation = currentVideoOrientation()
         }
         

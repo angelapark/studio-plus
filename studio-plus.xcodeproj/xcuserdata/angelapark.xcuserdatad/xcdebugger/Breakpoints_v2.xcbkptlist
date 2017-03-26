@@ -9,13 +9,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "studio-plus/SpringfieldViewController.swift"
-            timestampString = "512172266.071634"
+            filePath = "studio-plus/CameraView.swift"
+            timestampString = "512187258.905388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "prepare()"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "switchCameras(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "studio-plus/VuforiaManager/VuforiaManager.mm"
+            timestampString = "512192499.003624"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "687"
+            endingLineNumber = "687"
+            landmarkName = "-startCamera:viewWidth:andHeight:error:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,29 +41,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "studio-plus/SpringfieldViewController.swift"
-            timestampString = "512172490.39005"
+            filePath = "studio-plus/VuforiaManager/VuforiaManager.mm"
+            timestampString = "512192524.462432"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "prepare()"
+            startingLineNumber = "826"
+            endingLineNumber = "826"
+            landmarkName = "-resume:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "studio-plus/VuforiaManager/VuforiaManager.mm"
+            timestampString = "512192531.426114"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "694"
+            endingLineNumber = "694"
+            landmarkName = "-startCamera:viewWidth:andHeight:error:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "studio-plus/VuforiaManager/VuforiaManager.mm"
+            timestampString = "512192667.29196"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "688"
+            endingLineNumber = "688"
+            landmarkName = "-startCamera:viewWidth:andHeight:error:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "studio-plus/SpringfieldViewController.swift"
-            timestampString = "512172537.269854"
+            timestampString = "512198387.785699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "prepare()"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "vuforiaEAGLView(_:didTouchDownNode:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

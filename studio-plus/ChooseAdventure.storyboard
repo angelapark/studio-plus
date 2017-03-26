@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,44 +22,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bua-nG-poe">
-                                <rect key="frame" x="68.5" y="269.5" width="238" height="128"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yea-ht-sSs">
-                                        <rect key="frame" x="0.0" y="0.0" width="238" height="59"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="238" id="Fum-a9-jMZ"/>
-                                            <constraint firstAttribute="height" constant="59" id="cd2-PI-DUM"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="hp-enter-button"/>
-                                        <connections>
-                                            <action selector="enterHogsmeade:" destination="yNq-V3-wY8" eventType="touchUpInside" id="vg0-3K-Arf"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCA-2n-pDj">
-                                        <rect key="frame" x="0.0" y="69" width="238" height="59"/>
-                                        <state key="normal" backgroundImage="simpsons-enter-button"/>
-                                        <connections>
-                                            <action selector="enterSpringField:" destination="yNq-V3-wY8" eventType="touchUpInside" id="pzM-2Z-wUb"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="Oqv-Iy-6ku">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R5-0X-huU">
+                                <rect key="frame" x="165" y="235" width="142" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="simpsons-enter-button"/>
+                                <connections>
+                                    <action selector="enterSpringField:" destination="yNq-V3-wY8" eventType="touchUpInside" id="G93-Lp-qco"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kb-pD-7VX">
+                                <rect key="frame" x="175" y="391" width="157" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="hp-enter-button"/>
+                                <connections>
+                                    <action selector="enterHogsmeade:" destination="yNq-V3-wY8" eventType="touchUpInside" id="pWN-FM-bIM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Bua-nG-poe" firstAttribute="centerX" secondItem="zWJ-H4-htj" secondAttribute="centerX" id="IIT-Yb-51m"/>
-                            <constraint firstItem="Bua-nG-poe" firstAttribute="centerY" secondItem="zWJ-H4-htj" secondAttribute="centerY" id="wij-YN-1ma"/>
+                            <constraint firstItem="Oqv-Iy-6ku" firstAttribute="leading" secondItem="zWJ-H4-htj" secondAttribute="leading" id="5ZR-9x-m13"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Oqv-Iy-6ku" secondAttribute="trailing" constant="-16" id="KH4-AA-QzV"/>
+                            <constraint firstItem="Oqv-Iy-6ku" firstAttribute="bottom" secondItem="jr1-X5-mXW" secondAttribute="top" id="bQo-bE-WJO"/>
+                            <constraint firstItem="Oqv-Iy-6ku" firstAttribute="top" secondItem="Hvb-3w-Xr5" secondAttribute="bottom" constant="-20" id="gBF-tY-rPM"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nks-HU-sVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124" y="-49"/>
+            <point key="canvasLocation" x="124" y="-49.025487256371818"/>
         </scene>
     </scenes>
     <resources>
         <image name="hp-enter-button" width="540" height="134"/>
+        <image name="map" width="405" height="720"/>
         <image name="simpsons-enter-button" width="540" height="134"/>
     </resources>
 </document>

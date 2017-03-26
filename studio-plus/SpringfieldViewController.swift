@@ -154,7 +154,7 @@ extension SpringfieldViewController: VuforiaManagerDelegate {
     }
     
     func vuforiaManager(_ manager: VuforiaManager!, didFailToPreparingWithError error: Error!) {
-        print("did faid to preparing \(error)\n")
+        print("did fail to preparing \(error)\n")
     }
     
     func vuforiaManager(_ manager: VuforiaManager!, didUpdateWith state: VuforiaState!) {
@@ -253,5 +253,12 @@ extension SpringfieldViewController: CameraViewDelegate {
     
     func toggleHint() {
         //no-op
+    }
+    
+    func backToMap() {
+        if ((self.presentingViewController) != nil) {
+            stop()
+            self.dismiss(animated: false, completion: nil)
+        }
     }
 }

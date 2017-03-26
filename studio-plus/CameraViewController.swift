@@ -43,8 +43,8 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let cameraView = CameraView.instanceFromNib() as? CameraView {
-  
-                            self.cameraView = cameraView
+            self.cameraView = cameraView
+            cameraView.quickViewDelegate = self
             view.addSubview(cameraView)
         }
         cameraView?.setupSession()
@@ -61,28 +61,13 @@ class CameraViewController: UIViewController {
     override var prefersStatusBarHidden : Bool {
         return true
     }
-    
-    // MARK: - Setup session and preview
-   
-
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "QuickLookSegue" {
-            let quickLook = segue.destination as! QuickLookViewController
-            
-            if let image = cameraView?.thumbnail.backgroundImage(for: UIControlState()) {
-                quickLook.photoImage = image
-            } else {
-                quickLook.photoImage = UIImage(named: "Penguin")
-            }
-        }
-    }
 }
 
 extension CameraViewController: QuickViewDelegate {
     func showPhoto(image: UIImage) {
-        if let quickViewController = QuickLookViewController.viewController() {
-            quickViewController
+       if let quickViewController = QuickLookViewController.viewController() {
+            quickViewController.photoImage = image
+            present(quickViewController, animated: true)
         }
     }
 }

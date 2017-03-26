@@ -12,6 +12,7 @@ import Photos
 
 protocol QuickViewDelegate {
     func showPhoto(image: UIImage)
+}
 
 class CameraView: UIView {
     var quickViewDelegate: QuickViewDelegate?
@@ -80,7 +81,11 @@ class CameraView: UIView {
     }
     
     @IBAction func displayThumbnail(_ sender: Any) {
-        quickViewDelegate?.showPhoto()
+        guard let image = thumbnail.currentBackgroundImage else {
+            return
+        }
+    
+        quickViewDelegate?.showPhoto(image: image)
     }
 
     func configure(brandAssets: CameraBrandAssets) {
@@ -114,7 +119,7 @@ class CameraView: UIView {
     
     func setPhotoThumbnail(_ image: UIImage) {
         DispatchQueue.main.async { () -> Void in
-            self.thumbnail.contentMode = .scaleAspectFill
+            self.thumbnail.contentMode = .scaleAspectFit
             
             self.thumbnail.setBackgroundImage(image, for: UIControlState())
             self.thumbnail.layer.borderColor = UIColor.white.cgColor

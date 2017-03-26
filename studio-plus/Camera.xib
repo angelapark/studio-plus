@@ -61,7 +61,7 @@
                     <rect key="frame" x="0.0" y="571" width="375" height="96"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cz-RU-Qkm">
-                            <rect key="frame" x="147" y="8" width="80" height="80"/>
+                            <rect key="frame" x="148" y="8" width="80" height="80"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="CPc-H8-2Ba"/>
                             </constraints>

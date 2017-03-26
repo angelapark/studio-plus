@@ -29,6 +29,7 @@ class CameraViewController: UIViewController {
         }
     }
 
+    
 
     var brandAssets: CameraBrandAssets? {
         didSet {

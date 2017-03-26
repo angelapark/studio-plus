@@ -361,7 +361,6 @@
 				983C353B1E87032800087541 /* SpringfieldViewController.swift */,
 				983C36031E87C91500087541 /* SpringfieldViewController.storyboard */,
 				43EBA4AA1E874299003E65A3 /* Hogsmeade */,
-				983C35551E871BD700087541 /* Springfield */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -663,7 +662,7 @@
 				TargetAttributes = {
 					981936E11E7B457900F8421C = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 43LXQ9XH3C;
+						DevelopmentTeam = VFBSD3EVJ3;
 						ProvisioningStyle = Automatic;
 					};
 					981936F51E7B457900F8421C = {
@@ -909,7 +908,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 43LXQ9XH3C;
+				DEVELOPMENT_TEAM = VFBSD3EVJ3;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/studio-plus/vuforia-sdk-ios-6-2-9/build/include\"";
 				INFOPLIST_FILE = "studio-plus/Info.plist";
@@ -930,7 +929,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 43LXQ9XH3C;
+				DEVELOPMENT_TEAM = VFBSD3EVJ3;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/studio-plus/vuforia-sdk-ios-6-2-9/build/include\"";
 				INFOPLIST_FILE = "studio-plus/Info.plist";

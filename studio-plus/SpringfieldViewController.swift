@@ -11,6 +11,9 @@ import AVFoundation
 
 class SpringfieldViewController: UIViewController {
     
+    static func viewController() -> SpringfieldViewController? {
+        return UIStoryboard(name: "CameraViewController", bundle: Bundle.main).instantiateInitialViewController() as? SpringfieldViewController
+    }
     let vuforiaLicenseKey = "AYMrEOL/////AAAAGZAtWrwL8kBAu5nfDaUbHvZ2qfgLiVZ4KXtAd+yQU6RgaPzv2HFiI7VGxHAculE5GE3H2MbP2o4k6t8p7n6V59kQaWVyRT5sku+xuABy63ceWWFybkLf8Em1VMTUN3ADO4UQOrHBpUNEjxKWFpZNxm91dUdtkpf1mnTEU25YkD4p3+nfPRPvPuaP/fQbpOdkLBMMZqiO94a1LIl2929XB22vERJv4BNZ/bYinfHZKyHCVjd7TXN+T6cpwnz6MnD/BKlzf/rCPprGB89Nlbi7bTIM0VSFVqA9tx5eqYk0oybppyPS1wcPY3cWCjTzOQZlyZEKupCnoh2vDnZ1Kqmj1U4HGzcqZgKLhNCTOO4cAqVB"
     let vuforiaDataSetFile = "VuforiaSample.xml"
     
@@ -68,7 +71,11 @@ class SpringfieldViewController: UIViewController {
         if let cameraView = CameraView.instanceFromNib() as? CameraView {
             self.cameraView = cameraView
             view.addSubview(cameraView)
-            cameraView.quickViewDelegate = self
+            cameraView.delegate = self
+            if let brandAssets = brandAssets {
+                cameraView.configure(brandAssets: brandAssets)
+            }
+    
             cameraView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
         }
     }
@@ -236,11 +243,15 @@ extension SpringfieldViewController: VuforiaEAGLViewSceneSource, VuforiaEAGLView
     }
 }
 
-extension SpringfieldViewController: QuickViewDelegate {
+extension SpringfieldViewController: CameraViewDelegate {
     func showPhoto(image: UIImage) {
         if let quickViewController = QuickLookViewController.viewController() {
             quickViewController.photoImage = image
             present(quickViewController, animated: true)
         }
+    }
+    
+    func toggleHint() {
+        //no-op
     }
 }

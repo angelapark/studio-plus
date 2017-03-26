@@ -15,7 +15,8 @@ class SpringfieldViewController: UIViewController {
     let vuforiaDataSetFile = "VuforiaSample.xml"
     
     var vuforiaManager: VuforiaManager? = nil
-    var camera: UIView?
+    var cameraView: CameraView?
+    var arImage: UIImage?
     
     let boxMaterial = SCNMaterial()
     fileprivate var lastSceneName: String? = nil
@@ -29,9 +30,11 @@ class SpringfieldViewController: UIViewController {
         
         prepare()
         
-        camera = CameraView.instanceFromNib()
-        self.view.addSubview(camera!)
-        camera?.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        if let cameraView = CameraView.instanceFromNib() as? CameraView {
+            self.cameraView = cameraView
+            view.addSubview(cameraView)
+            cameraView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,10 +45,13 @@ class SpringfieldViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        do {
-            try vuforiaManager?.stop()
-        } catch let error {
-            print("\(error)")
+        stop()
+    }
+    
+    func showPhoto(image: UIImage) {
+        if let quickViewController = QuickLookViewController.viewController() {
+            quickViewController.photoImage = image
+            present(quickViewController, animated: true)
         }
     }
 }
@@ -86,6 +92,23 @@ private extension SpringfieldViewController {
             print("\(error)")
         }
     }
+    
+    func stop() {
+        do {
+            try vuforiaManager?.stop()
+        } catch let error {
+            print("\(error)")
+        }
+    }
+    
+    func start() {
+        do {
+            try vuforiaManager?.start()
+            vuforiaManager?.setContinuousAutofocusEnabled(true)
+        }catch let error {
+            print("\(error)")
+        }
+    }
 }
 
 extension SpringfieldViewController {
@@ -102,12 +125,7 @@ extension SpringfieldViewController: VuforiaManagerDelegate {
     func vuforiaManagerDidFinishPreparing(_ manager: VuforiaManager!) {
         print("did finish preparing\n")
         
-        do {
-            try vuforiaManager?.start()
-            vuforiaManager?.setContinuousAutofocusEnabled(true)
-        }catch let error {
-            print("\(error)")
-        }
+        start()
     }
     
     func vuforiaManager(_ manager: VuforiaManager!, didFailToPreparingWithError error: Error!) {
@@ -180,7 +198,13 @@ extension SpringfieldViewController: VuforiaEAGLViewSceneSource, VuforiaEAGLView
     
     func vuforiaEAGLView(_ view: VuforiaEAGLView!, didTouchDownNode node: SCNNode!) {
         print("touch down \(node.name)\n")
-        boxMaterial.transparency = 0.6
+        cameraView?.removeFromSuperview()
+        UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, false, UIScreen.main.scale)
+        self.view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        showPhoto(image: image)
+
     }
     
     func vuforiaEAGLView(_ view: VuforiaEAGLView!, didTouchUp node: SCNNode!) {

@@ -23,7 +23,7 @@ class ViewController: UIViewController {
 
     @IBAction func enterHogsmeade(_ sender: Any) {
         
-        if let cameraViewController = CameraViewController.viewController() {
+        if let cameraViewController = WandViewController.viewController(subClass: .wandViewController) {
             cameraViewController.brandAssets = ViewController.hogsmeadeBrandAssets
             present(cameraViewController, animated: true, completion: nil)
         }

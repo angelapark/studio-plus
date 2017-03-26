@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vvl-dR-GuK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wand View Controller-->
+        <scene sceneID="90i-nq-nO5">
+            <objects>
+                <viewController id="vvl-dR-GuK" customClass="WandViewController" customModule="studio_plus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RrR-uc-Ew0"/>
+                        <viewControllerLayoutGuide type="bottom" id="i3v-c6-2K7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QxD-Jv-TTi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hp-camera-wand" translatesAutoresizingMaskIntoConstraints="NO" id="WgU-h7-pVO">
+                                <rect key="frame" x="171" y="380" width="33" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="weh-Rs-Vef"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hp-camera-guide" translatesAutoresizingMaskIntoConstraints="NO" id="goN-tE-o2Y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="goN-tE-o2Y" firstAttribute="centerX" secondItem="WgU-h7-pVO" secondAttribute="centerX" id="1Kc-c1-Zym"/>
+                            <constraint firstItem="goN-tE-o2Y" firstAttribute="bottom" secondItem="i3v-c6-2K7" secondAttribute="top" id="85K-3a-oyv"/>
+                            <constraint firstItem="WgU-h7-pVO" firstAttribute="centerX" secondItem="QxD-Jv-TTi" secondAttribute="centerX" id="9tk-Dg-xZZ"/>
+                            <constraint firstItem="WgU-h7-pVO" firstAttribute="top" secondItem="RrR-uc-Ew0" secondAttribute="bottom" constant="380" id="AQl-br-vrF"/>
+                            <constraint firstItem="goN-tE-o2Y" firstAttribute="top" secondItem="RrR-uc-Ew0" secondAttribute="bottom" id="F3L-qX-jW5"/>
+                            <constraint firstItem="i3v-c6-2K7" firstAttribute="top" secondItem="WgU-h7-pVO" secondAttribute="bottom" constant="127" id="hVf-2b-y2g"/>
+                            <constraint firstItem="goN-tE-o2Y" firstAttribute="leading" secondItem="QxD-Jv-TTi" secondAttribute="leading" id="lbc-op-UKZ"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="wandGuide" destination="goN-tE-o2Y" id="15T-Zf-pnD"/>
+                        <outlet property="wandImage" destination="WgU-h7-pVO" id="AFl-46-Xc0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AuZ-M0-hHS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31.199999999999999" y="134.48275862068968"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hp-camera-guide" width="750" height="1334"/>
+        <image name="hp-camera-wand" width="178" height="902"/>
+    </resources>
+</document>

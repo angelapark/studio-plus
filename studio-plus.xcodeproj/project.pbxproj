@@ -12,6 +12,8 @@
 		4347A50C1E8701B4000D6CCB /* Camera.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4347A50B1E8701B4000D6CCB /* Camera.xib */; };
 		4347A50E1E870261000D6CCB /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347A50D1E870261000D6CCB /* CameraView.swift */; };
 		43EBA4A91E87355D003E65A3 /* QuickView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EBA4A81E87355D003E65A3 /* QuickView.storyboard */; };
+		43EBA4AC1E8742B7003E65A3 /* Hogsmeade.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EBA4AB1E8742B7003E65A3 /* Hogsmeade.storyboard */; };
+		43EBA4AE1E8742EC003E65A3 /* WandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EBA4AD1E8742EC003E65A3 /* WandViewController.swift */; };
 		981936E61E7B457900F8421C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981936E51E7B457900F8421C /* AppDelegate.swift */; };
 		981936ED1E7B457900F8421C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981936EC1E7B457900F8421C /* Assets.xcassets */; };
 		981936F01E7B457900F8421C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981936EE1E7B457900F8421C /* LaunchScreen.storyboard */; };
@@ -84,6 +86,8 @@
 		4347A50B1E8701B4000D6CCB /* Camera.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Camera.xib; sourceTree = "<group>"; };
 		4347A50D1E870261000D6CCB /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		43EBA4A81E87355D003E65A3 /* QuickView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QuickView.storyboard; path = ../QuickView.storyboard; sourceTree = "<group>"; };
+		43EBA4AB1E8742B7003E65A3 /* Hogsmeade.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Hogsmeade.storyboard; sourceTree = "<group>"; };
+		43EBA4AD1E8742EC003E65A3 /* WandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WandViewController.swift; sourceTree = "<group>"; };
 		981936E21E7B457900F8421C /* studio-plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "studio-plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		981936E51E7B457900F8421C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		981936EC1E7B457900F8421C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -265,6 +269,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43EBA4AA1E874299003E65A3 /* Hogsmeade */ = {
+			isa = PBXGroup;
+			children = (
+				43EBA4AB1E8742B7003E65A3 /* Hogsmeade.storyboard */,
+				43EBA4AD1E8742EC003E65A3 /* WandViewController.swift */,
+			);
+			name = Hogsmeade;
+			sourceTree = "<group>";
+		};
 		981936D91E7B457900F8421C = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +360,8 @@
 				9819372C1E7B479300F8421C /* LeaderBoard.storyboard */,
 				983C353B1E87032800087541 /* SpringfieldViewController.swift */,
 				983C36031E87C91500087541 /* SpringfieldViewController.storyboard */,
+				43EBA4AA1E874299003E65A3 /* Hogsmeade */,
+				983C35551E871BD700087541 /* Springfield */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -708,6 +723,7 @@
 				981937191E7B46B500F8421C /* Onboarding.storyboard in Resources */,
 				9819371D1E7B46EA00F8421C /* CreateProfile.storyboard in Resources */,
 				983C35EA1E872F3300087541 /* VuforiaSample.xml in Resources */,
+				43EBA4AC1E8742B7003E65A3 /* Hogsmeade.storyboard in Resources */,
 				983C35E71E872F3300087541 /* Tarmac.dat in Resources */,
 				983C35FD1E8730F000087541 /* model_bart.dae in Resources */,
 				983C35FE1E8730F000087541 /* model_krusty.dae in Resources */,
@@ -748,6 +764,7 @@
 				983C357B1E872E8500087541 /* VuforiaManager.mm in Sources */,
 				981937271E7B476100F8421C /* ParkMapViewController.swift in Sources */,
 				981936E61E7B457900F8421C /* AppDelegate.swift in Sources */,
+				43EBA4AE1E8742EC003E65A3 /* WandViewController.swift in Sources */,
 				9819372B1E7B478B00F8421C /* LeaderBoardViewController.swift in Sources */,
 				981937231E7B472500F8421C /* CameraViewController.swift in Sources */,
 				983C357C1E872E8500087541 /* VuforiaObjects.mm in Sources */,

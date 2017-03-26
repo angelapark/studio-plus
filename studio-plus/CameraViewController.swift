@@ -21,6 +21,8 @@ struct CameraBrandAssets {
 }
 
 class CameraViewController: UIViewController {
+    
+    
     var cameraView: CameraView? {
         didSet {
             if let brandAssets = brandAssets, let cameraView = cameraView {
@@ -29,6 +31,7 @@ class CameraViewController: UIViewController {
         }
     }
 
+
     var brandAssets: CameraBrandAssets? {
         didSet {
             if let brandAssets = brandAssets {
@@ -36,15 +39,26 @@ class CameraViewController: UIViewController {
             }
         }
     }
-    static func viewController() -> CameraViewController? {
-        return UIStoryboard(name: "Camera", bundle: Bundle.main).instantiateInitialViewController() as? CameraViewController
+    static func viewController(subClass: CameraViewController.Subclass = .cameraViewController) -> CameraViewController? {
+        
+        switch subClass {
+        case .cameraViewController:
+            return UIStoryboard(name: subClass.rawValue, bundle: Bundle.main).instantiateInitialViewController() as? CameraViewController
+        case .wandViewController:
+            return UIStoryboard(name: subClass.rawValue, bundle: Bundle.main).instantiateInitialViewController() as? WandViewController
+        }
+    }
+    
+    enum Subclass: String {
+        case wandViewController = "Hogsmeade"
+        case cameraViewController = "Camera"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let cameraView = CameraView.instanceFromNib() as? CameraView {
             self.cameraView = cameraView
-            cameraView.quickViewDelegate = self
+            cameraView.delegate = self
             view.addSubview(cameraView)
         }
         cameraView?.setupSession()
@@ -63,11 +77,15 @@ class CameraViewController: UIViewController {
     }
 }
 
-extension CameraViewController: QuickViewDelegate {
+extension CameraViewController: CameraViewDelegate {
     func showPhoto(image: UIImage) {
        if let quickViewController = QuickLookViewController.viewController() {
             quickViewController.photoImage = image
             present(quickViewController, animated: true)
         }
+    }
+    
+    func toggleHint() {
+        
     }
 }

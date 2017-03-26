@@ -32,14 +32,14 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="hp-enter-button"/>
                                         <connections>
-                                            <segue destination="AiA-20-On3" kind="show" id="juI-WS-E5v"/>
+                                            <action selector="enterHogsmeade:" destination="yNq-V3-wY8" eventType="touchUpInside" id="vg0-3K-Arf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCA-2n-pDj">
                                         <rect key="frame" x="0.0" y="69" width="238" height="59"/>
                                         <state key="normal" backgroundImage="simpsons-enter-button"/>
                                         <connections>
-                                            <segue destination="Y9N-V1-lcb" kind="show" id="bcD-Sg-60t"/>
+                                            <action selector="enterSpringField:" destination="yNq-V3-wY8" eventType="touchUpInside" id="pzM-2Z-wUb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -55,22 +55,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nks-HU-sVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="124" y="-49"/>
-        </scene>
-        <!--CameraViewController-->
-        <scene sceneID="my5-FF-ev7">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CameraViewController" id="AiA-20-On3" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Phu-EZ-DMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="684" y="-63"/>
-        </scene>
-        <!--SpringfieldViewController-->
-        <scene sceneID="jAJ-3Z-EOa">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SpringfieldViewController" id="Y9N-V1-lcb" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AWQ-XU-raa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="678" y="61"/>
         </scene>
     </scenes>
     <resources>

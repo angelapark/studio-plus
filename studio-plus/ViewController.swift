@@ -23,11 +23,7 @@ class ViewController: UIViewController {
 
     @IBAction func enterHogsmeade(_ sender: Any) {
         
-        if let cameraViewController = CameraViewController.viewController() {
-            cameraViewController.brandAssets = ViewController.hogsmeadeBrandAssets
-            present(cameraViewController, animated: true, completion: nil)
-        }
-    }
+            }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,12 +40,4 @@ class ViewController: UIViewController {
     }
     */
     
-
-    @IBAction func SegueToSpringfield(_ sender: Any) {
-        let springfieldVC = SpringfieldViewController()
-        springfieldVC.brandAssets = ViewController.springfieldBrandAssets
-        present(SpringfieldViewController(), animated: true, completion: nil)
-    }
-    
-
 }

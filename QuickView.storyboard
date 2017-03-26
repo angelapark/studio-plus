@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KW2-QJ-DK3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quick Look View Controller-->
+        <scene sceneID="Vcs-RS-I16">
+            <objects>
+                <viewController id="KW2-QJ-DK3" customClass="QuickLookViewController" customModule="studio_plus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z8e-Lz-681"/>
+                        <viewControllerLayoutGuide type="bottom" id="uzv-ZX-db4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GhW-l6-EjC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zs4-aI-2nn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjS-y7-21k">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <action selector="closeQuickLook:" destination="KW2-QJ-DK3" eventType="touchUpInside" id="ZQg-wB-SUn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rjS-y7-21k" firstAttribute="leading" secondItem="GhW-l6-EjC" secondAttribute="leading" id="1nc-23-53o"/>
+                            <constraint firstItem="Zs4-aI-2nn" firstAttribute="top" secondItem="z8e-Lz-681" secondAttribute="bottom" id="9tR-EE-oNc"/>
+                            <constraint firstItem="Zs4-aI-2nn" firstAttribute="leading" secondItem="GhW-l6-EjC" secondAttribute="leading" id="CEE-WM-Y1B"/>
+                            <constraint firstItem="uzv-ZX-db4" firstAttribute="top" secondItem="rjS-y7-21k" secondAttribute="bottom" id="Gxt-FW-WAp"/>
+                            <constraint firstItem="rjS-y7-21k" firstAttribute="top" secondItem="z8e-Lz-681" secondAttribute="bottom" id="YT6-H3-QxN"/>
+                            <constraint firstItem="uzv-ZX-db4" firstAttribute="top" secondItem="Zs4-aI-2nn" secondAttribute="bottom" id="YeL-8I-Kbq"/>
+                            <constraint firstAttribute="trailing" secondItem="rjS-y7-21k" secondAttribute="trailing" id="oT2-Oc-RwD"/>
+                            <constraint firstAttribute="trailing" secondItem="Zs4-aI-2nn" secondAttribute="trailing" id="yr5-DX-Ovz"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="quickLookImage" destination="Zs4-aI-2nn" id="ER0-gf-PwV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vft-dt-Zkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770.5" y="386.5"/>
+        </scene>
+    </scenes>
+</document>

@@ -30,49 +30,5 @@
             </objects>
             <point key="canvasLocation" x="-31" y="135"/>
         </scene>
-        <!--Quick Look View Controller-->
-        <scene sceneID="O9J-QD-Z2s">
-            <objects>
-                <viewController id="7l8-xQ-3ul" customClass="QuickLookViewController" customModule="studio_plus" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GAY-M7-kMA"/>
-                        <viewControllerLayoutGuide type="bottom" id="syz-Ph-zzC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bq3-2m-Ldb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rbW-j5-wvO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSU-Sf-o5d">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <connections>
-                                    <action selector="closeQuickLook:" destination="7l8-xQ-3ul" eventType="touchUpInside" id="yEu-lJ-Aoe"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="kSU-Sf-o5d" firstAttribute="top" secondItem="GAY-M7-kMA" secondAttribute="bottom" id="9ZB-Rb-xMz"/>
-                            <constraint firstItem="kSU-Sf-o5d" firstAttribute="leading" secondItem="bq3-2m-Ldb" secondAttribute="leading" id="a4z-VU-mrJ"/>
-                            <constraint firstItem="rbW-j5-wvO" firstAttribute="top" secondItem="GAY-M7-kMA" secondAttribute="bottom" id="g2a-a7-PuY"/>
-                            <constraint firstItem="syz-Ph-zzC" firstAttribute="top" secondItem="kSU-Sf-o5d" secondAttribute="bottom" id="mzQ-6K-Vul"/>
-                            <constraint firstItem="syz-Ph-zzC" firstAttribute="top" secondItem="rbW-j5-wvO" secondAttribute="bottom" id="qHZ-uR-ViM"/>
-                            <constraint firstAttribute="trailing" secondItem="kSU-Sf-o5d" secondAttribute="trailing" id="qXo-HP-IPT"/>
-                            <constraint firstAttribute="trailing" secondItem="rbW-j5-wvO" secondAttribute="trailing" id="yBf-aX-vXQ"/>
-                            <constraint firstItem="rbW-j5-wvO" firstAttribute="leading" secondItem="bq3-2m-Ldb" secondAttribute="leading" id="zat-RZ-6zQ"/>
-                        </constraints>
-                    </view>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <connections>
-                        <outlet property="quickLookImage" destination="rbW-j5-wvO" id="bf1-J7-4Nz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="26o-pD-sa2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="770.5" y="386.5"/>
-        </scene>
     </scenes>
 </document>

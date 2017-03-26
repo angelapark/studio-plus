@@ -20,7 +20,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMM-I9-avA">
-                    <rect key="frame" x="15" y="30" width="345" height="48"/>
+                    <rect key="frame" x="15" y="15" width="345" height="48"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4l-hX-7ja">
                             <rect key="frame" x="305" y="9" width="40" height="30"/>
@@ -34,9 +34,10 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oD-MI-q22">
-                            <rect key="frame" x="0.0" y="9" width="30" height="30"/>
+                            <rect key="frame" x="0.0" y="11.5" width="37.5" height="25"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="5oD-MI-q22" secondAttribute="height" multiplier="1:1" id="3PR-fg-qt9"/>
+                                <constraint firstAttribute="width" secondItem="5oD-MI-q22" secondAttribute="height" multiplier="9:6" id="3PR-fg-qt9"/>
+                                <constraint firstAttribute="height" constant="25" id="3nz-eu-HJA"/>
                             </constraints>
                             <connections>
                                 <action selector="toggleHint:" destination="LfL-VC-J2K" eventType="touchUpInside" id="GfP-sJ-ZJT"/>
@@ -49,7 +50,6 @@
                         <constraint firstItem="5oD-MI-q22" firstAttribute="centerY" secondItem="YMM-I9-avA" secondAttribute="centerY" id="OWi-il-CRs"/>
                         <constraint firstItem="5oD-MI-q22" firstAttribute="leading" secondItem="YMM-I9-avA" secondAttribute="leading" id="QcV-UF-2D5"/>
                         <constraint firstAttribute="trailing" secondItem="J4l-hX-7ja" secondAttribute="trailing" id="VxV-jF-t8N"/>
-                        <constraint firstItem="5oD-MI-q22" firstAttribute="height" secondItem="J4l-hX-7ja" secondAttribute="height" id="aoJ-zD-zvR"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkp-6O-f3g" userLabel="Bottom Controls">
@@ -107,7 +107,7 @@
                 <constraint firstAttribute="trailing" secondItem="Bj1-VP-LfK" secondAttribute="trailing" constant="15" id="MFm-wG-IuO"/>
                 <constraint firstAttribute="trailing" secondItem="YMM-I9-avA" secondAttribute="trailing" constant="15" id="S33-HC-LeL"/>
                 <constraint firstAttribute="bottom" secondItem="8qF-6R-w3M" secondAttribute="bottom" id="hAl-oY-lLv"/>
-                <constraint firstItem="8qF-6R-w3M" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" constant="-30" id="kdv-af-l5X"/>
+                <constraint firstItem="8qF-6R-w3M" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" constant="-15" id="kdv-af-l5X"/>
                 <constraint firstAttribute="trailing" secondItem="8qF-6R-w3M" secondAttribute="trailing" id="lu8-bR-RLZ"/>
                 <constraint firstItem="8qF-6R-w3M" firstAttribute="leading" secondItem="LfL-VC-J2K" secondAttribute="leading" id="oAQ-U7-gf2"/>
                 <constraint firstAttribute="trailing" secondItem="Qkp-6O-f3g" secondAttribute="trailing" id="yS5-er-06k"/>

@@ -43,6 +43,11 @@ class SpringfieldViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.cameraView?.toggleHint(toSelected: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

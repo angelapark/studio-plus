@@ -10,13 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "studio-plus/CameraView.swift"
-            timestampString = "512187258.905388"
+            timestampString = "512213049.929596"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "switchCameras(_:)"
-            landmarkType = "7">
+            startingLineNumber = "54"
+            endingLineNumber = "54">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -80,22 +78,6 @@
             startingLineNumber = "688"
             endingLineNumber = "688"
             landmarkName = "-startCamera:viewWidth:andHeight:error:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "studio-plus/SpringfieldViewController.swift"
-            timestampString = "512198387.785699"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
-            landmarkName = "vuforiaEAGLView(_:didTouchDownNode:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

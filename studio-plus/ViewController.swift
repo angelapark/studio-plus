@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     static let hogsmeadeBrandAssets = CameraBrandAssets(hintImageDefaultName: "hp-camera-hint-default", hintImageActivatedName: "hp-camera-hint-activated")
+    
+    static let springfieldBrandAssets = CameraBrandAssets(hintImageDefaultName: "simpsons-camera-hint-default", hintImageActivatedName: "simpsons-camera-hint-activated")
 
         
     override func viewDidLoad() {
@@ -44,7 +46,9 @@ class ViewController: UIViewController {
     
 
     @IBAction func SegueToSpringfield(_ sender: Any) {
-        present(SpringfieldViewController(), animated: false, completion: nil)
+        let springfieldVC = SpringfieldViewController()
+        springfieldVC.brandAssets = ViewController.springfieldBrandAssets
+        present(SpringfieldViewController(), animated: true, completion: nil)
     }
     
 

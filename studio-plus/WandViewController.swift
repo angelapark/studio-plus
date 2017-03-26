@@ -26,6 +26,7 @@ class WandViewController: CameraViewController {
         view.bringSubview(toFront: wandGuide)
         view.bringSubview(toFront: wandImage)
         wandGuide.alpha = 0
+        catEars.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,6 +43,7 @@ class WandViewController: CameraViewController {
             })
         })
     }
+    @IBOutlet weak var catEars: UIImageView!
     
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
         let translation = recognizer.translation(in: self.view)
@@ -52,7 +54,8 @@ class WandViewController: CameraViewController {
         
         recognizer.setTranslation(CGPoint.zero, in: self.view)
         if recognizer.state.rawValue == 3 {
-            //apply filter
+            view.bringSubview(toFront: catEars)
+            catEars.isHidden = false
         }
     }
 

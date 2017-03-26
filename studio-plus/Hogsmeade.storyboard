@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -37,6 +38,9 @@
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="catears" translatesAutoresizingMaskIntoConstraints="NO" id="j8A-nq-T5Q">
+                                <rect key="frame" x="16" y="165" width="343" height="112"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -45,14 +49,19 @@
                             <constraint firstItem="WgU-h7-pVO" firstAttribute="centerX" secondItem="QxD-Jv-TTi" secondAttribute="centerX" id="9tk-Dg-xZZ"/>
                             <constraint firstItem="WgU-h7-pVO" firstAttribute="top" secondItem="RrR-uc-Ew0" secondAttribute="bottom" constant="380" id="AQl-br-vrF"/>
                             <constraint firstItem="goN-tE-o2Y" firstAttribute="top" secondItem="RrR-uc-Ew0" secondAttribute="bottom" id="F3L-qX-jW5"/>
+                            <constraint firstItem="j8A-nq-T5Q" firstAttribute="top" secondItem="RrR-uc-Ew0" secondAttribute="bottom" constant="165" id="FUc-6x-8ez"/>
+                            <constraint firstItem="j8A-nq-T5Q" firstAttribute="centerX" secondItem="WgU-h7-pVO" secondAttribute="centerX" id="G6l-q3-yyU"/>
+                            <constraint firstItem="WgU-h7-pVO" firstAttribute="top" secondItem="j8A-nq-T5Q" secondAttribute="bottom" constant="8" symbolic="YES" id="YLD-Zc-LMi"/>
                             <constraint firstItem="i3v-c6-2K7" firstAttribute="top" secondItem="WgU-h7-pVO" secondAttribute="bottom" constant="127" id="hVf-2b-y2g"/>
                             <constraint firstItem="goN-tE-o2Y" firstAttribute="leading" secondItem="QxD-Jv-TTi" secondAttribute="leading" id="lbc-op-UKZ"/>
+                            <constraint firstItem="j8A-nq-T5Q" firstAttribute="leading" secondItem="QxD-Jv-TTi" secondAttribute="leadingMargin" id="yCQ-Vv-Wrn"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="catEars" destination="j8A-nq-T5Q" id="OzS-qQ-ctS"/>
                         <outlet property="wandGuide" destination="goN-tE-o2Y" id="15T-Zf-pnD"/>
                         <outlet property="wandImage" destination="WgU-h7-pVO" id="AFl-46-Xc0"/>
                     </connections>
@@ -68,6 +77,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="catears" width="1520" height="556"/>
         <image name="hp-camera-guide" width="750" height="1334"/>
         <image name="hp-camera-wand" width="178" height="902"/>
     </resources>

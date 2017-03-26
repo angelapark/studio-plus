@@ -34,22 +34,29 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oD-MI-q22">
-                            <rect key="frame" x="0.0" y="11.5" width="37.5" height="25"/>
+                            <rect key="frame" x="0.0" y="6.5" width="40" height="35"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="5oD-MI-q22" secondAttribute="height" multiplier="9:6" id="3PR-fg-qt9"/>
-                                <constraint firstAttribute="height" constant="25" id="3nz-eu-HJA"/>
+                                <constraint firstAttribute="height" constant="35" id="3nz-eu-HJA"/>
+                                <constraint firstAttribute="width" constant="40" id="o82-fd-B2V"/>
                             </constraints>
                             <connections>
                                 <action selector="toggleHint:" destination="LfL-VC-J2K" eventType="touchUpInside" id="GfP-sJ-ZJT"/>
                             </connections>
                         </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Mg-dc-RJO" userLabel="Button Image">
+                            <rect key="frame" x="0.0" y="6.5" width="40" height="35"/>
+                        </imageView>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="2Mg-dc-RJO" firstAttribute="top" secondItem="5oD-MI-q22" secondAttribute="top" id="Gpv-tP-9dr"/>
                         <constraint firstAttribute="height" constant="48" id="LOd-QG-wiv"/>
                         <constraint firstItem="J4l-hX-7ja" firstAttribute="centerY" secondItem="YMM-I9-avA" secondAttribute="centerY" id="NGL-g9-N3L"/>
                         <constraint firstItem="5oD-MI-q22" firstAttribute="centerY" secondItem="YMM-I9-avA" secondAttribute="centerY" id="OWi-il-CRs"/>
                         <constraint firstItem="5oD-MI-q22" firstAttribute="leading" secondItem="YMM-I9-avA" secondAttribute="leading" id="QcV-UF-2D5"/>
                         <constraint firstAttribute="trailing" secondItem="J4l-hX-7ja" secondAttribute="trailing" id="VxV-jF-t8N"/>
+                        <constraint firstItem="2Mg-dc-RJO" firstAttribute="leading" secondItem="5oD-MI-q22" secondAttribute="leading" id="eEN-cu-3hB"/>
+                        <constraint firstItem="2Mg-dc-RJO" firstAttribute="width" secondItem="5oD-MI-q22" secondAttribute="width" id="qlD-xk-B74"/>
+                        <constraint firstItem="2Mg-dc-RJO" firstAttribute="height" secondItem="5oD-MI-q22" secondAttribute="height" id="rf8-n2-rz4"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkp-6O-f3g" userLabel="Bottom Controls">
@@ -115,6 +122,7 @@
             <connections>
                 <outlet property="camPreview" destination="8qF-6R-w3M" id="DgX-hL-88n"/>
                 <outlet property="hintButton" destination="5oD-MI-q22" id="3Kt-5N-zMq"/>
+                <outlet property="hintImage" destination="2Mg-dc-RJO" id="TlY-IY-5Zd"/>
                 <outlet property="switchCameraButton" destination="J4l-hX-7ja" id="bgo-DH-6eC"/>
                 <outlet property="thumbnail" destination="Bj1-VP-LfK" id="Iet-E4-b6P"/>
             </connections>

@@ -23,6 +23,6 @@ class ChooseAdventureViewController: UIViewController {
     @IBAction func enterSpringField(_ sender: Any) {
         let springfieldVC = SpringfieldViewController()
         springfieldVC.brandAssets = ViewController.springfieldBrandAssets
-        present(SpringfieldViewController(), animated: true, completion: nil)
+        present(springfieldVC, animated: true, completion: nil)
     }
 }

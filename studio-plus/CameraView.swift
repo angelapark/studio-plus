@@ -22,6 +22,7 @@ class CameraView: UIView {
     @IBOutlet weak var thumbnail: UIButton!
     @IBOutlet weak var hintButton: UIButton!
     
+    @IBOutlet var hintImage: UIImageView!
     @IBOutlet weak var switchCameraButton: UIButton!
     
     //MARK - Properties
@@ -30,7 +31,8 @@ class CameraView: UIView {
     var previewLayer: AVCaptureVideoPreviewLayer!
     var activeInput: AVCaptureDeviceInput!
     
-    
+    var brandImageDefault: UIImage?
+    var brandImageSelected: UIImage?
     
     class func instanceFromNib() -> UIView {
         return UINib(nibName: "Camera", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
@@ -79,9 +81,11 @@ class CameraView: UIView {
             }
         }
     }
+    
     func toggleHint(toSelected: Bool? = nil) {
         let isSelected = toSelected ?? !hintButton.isSelected
         hintButton.isSelected = isSelected
+        hintImage.image = isSelected ? brandImageSelected : brandImageDefault
     }
 
 
@@ -105,11 +109,10 @@ class CameraView: UIView {
 
     func configure(brandAssets: CameraBrandAssets) {
         if let defaultImage =  UIImage(named: brandAssets.hintImageDefaultName) {
-            hintButton.setImage(defaultImage, for: .normal)
-
+            brandImageDefault = defaultImage
         }
         if let selectedImage =  UIImage(named: brandAssets.hintImageActivatedName) {
-            hintButton.setImage(selectedImage, for: .selected)
+            brandImageSelected = selectedImage
         }
         
         

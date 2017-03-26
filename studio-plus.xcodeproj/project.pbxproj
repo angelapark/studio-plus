@@ -11,6 +11,7 @@
 		4347A50A1E86F94B000D6CCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347A5091E86F94B000D6CCB /* ViewController.swift */; };
 		4347A50C1E8701B4000D6CCB /* Camera.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4347A50B1E8701B4000D6CCB /* Camera.xib */; };
 		4347A50E1E870261000D6CCB /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347A50D1E870261000D6CCB /* CameraView.swift */; };
+		43EBA4A91E87355D003E65A3 /* QuickView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EBA4A81E87355D003E65A3 /* QuickView.storyboard */; };
 		981936E61E7B457900F8421C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981936E51E7B457900F8421C /* AppDelegate.swift */; };
 		981936ED1E7B457900F8421C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981936EC1E7B457900F8421C /* Assets.xcassets */; };
 		981936F01E7B457900F8421C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981936EE1E7B457900F8421C /* LaunchScreen.storyboard */; };
@@ -80,6 +81,7 @@
 		4347A5091E86F94B000D6CCB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4347A50B1E8701B4000D6CCB /* Camera.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Camera.xib; sourceTree = "<group>"; };
 		4347A50D1E870261000D6CCB /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		43EBA4A81E87355D003E65A3 /* QuickView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QuickView.storyboard; path = ../QuickView.storyboard; sourceTree = "<group>"; };
 		981936E21E7B457900F8421C /* studio-plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "studio-plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		981936E51E7B457900F8421C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		981936EC1E7B457900F8421C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				981937221E7B472500F8421C /* CameraViewController.swift */,
 				981937241E7B472C00F8421C /* Camera.storyboard */,
 				981937261E7B476100F8421C /* ParkMapViewController.swift */,
+				43EBA4A81E87355D003E65A3 /* QuickView.storyboard */,
 				981937281E7B477D00F8421C /* ParkMap.storyboard */,
 				9819372A1E7B478B00F8421C /* LeaderBoardViewController.swift */,
 				9819372C1E7B479300F8421C /* LeaderBoard.storyboard */,
@@ -647,7 +650,7 @@
 				TargetAttributes = {
 					981936E11E7B457900F8421C = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 43LXQ9XH3C;
+						DevelopmentTeam = VFBSD3EVJ3;
 						ProvisioningStyle = Automatic;
 					};
 					981936F51E7B457900F8421C = {
@@ -688,6 +691,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				981936F01E7B457900F8421C /* LaunchScreen.storyboard in Resources */,
+				43EBA4A91E87355D003E65A3 /* QuickView.storyboard in Resources */,
 				983C35E41E872F3300087541 /* bart.dae in Resources */,
 				981937251E7B472C00F8421C /* Camera.storyboard in Resources */,
 				983C35E61E872F3300087541 /* StonesAndChips.xml in Resources */,
@@ -888,7 +892,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 43LXQ9XH3C;
+				DEVELOPMENT_TEAM = VFBSD3EVJ3;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/studio-plus/vuforia-sdk-ios-6-2-9/build/include\"";
 				INFOPLIST_FILE = "studio-plus/Info.plist";
@@ -909,7 +913,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 43LXQ9XH3C;
+				DEVELOPMENT_TEAM = VFBSD3EVJ3;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/studio-plus/vuforia-sdk-ios-6-2-9/build/include\"";
 				INFOPLIST_FILE = "studio-plus/Info.plist";

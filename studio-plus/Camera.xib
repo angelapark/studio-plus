@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qF-6R-w3M" customClass="CameraView" customModule="studio_plus" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qF-6R-w3M">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
@@ -61,11 +61,14 @@
                     <rect key="frame" x="0.0" y="571" width="375" height="96"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cz-RU-Qkm">
-                            <rect key="frame" x="147" y="8" width="80" height="80"/>
+                            <rect key="frame" x="148" y="8" width="80" height="80"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="CPc-H8-2Ba"/>
                             </constraints>
                             <state key="normal" image="hp-camera-button"/>
+                            <connections>
+                                <action selector="capturePhoto:" destination="LfL-VC-J2K" eventType="touchUpInside" id="Le6-u2-ZyM"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bj1-VP-LfK">
                             <rect key="frame" x="36" y="25" width="45" height="45"/>
@@ -74,6 +77,9 @@
                                 <constraint firstAttribute="height" constant="45" id="Ot3-sD-Ge5"/>
                                 <constraint firstAttribute="width" constant="45" id="wpt-mx-6XD"/>
                             </constraints>
+                            <connections>
+                                <action selector="displayThumbnail:" destination="LfL-VC-J2K" eventType="touchUpInside" id="6gH-av-nCQ"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29792774820000001" colorSpace="custom" customColorSpace="sRGB"/>

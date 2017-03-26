@@ -15,11 +15,26 @@ class SpringfieldViewController: UIViewController {
     let vuforiaDataSetFile = "VuforiaSample.xml"
     
     var vuforiaManager: VuforiaManager? = nil
-    var cameraView: CameraView?
     var arImage: UIImage?
     
     let boxMaterial = SCNMaterial()
     fileprivate var lastSceneName: String? = nil
+    
+    var cameraView: CameraView? {
+        didSet {
+            if let brandAssets = brandAssets, let cameraView = cameraView {
+                cameraView.configure(brandAssets: brandAssets)
+            }
+        }
+    }
+    
+    var brandAssets: CameraBrandAssets? {
+        didSet {
+            if let brandAssets = brandAssets {
+                cameraView?.configure(brandAssets: brandAssets)
+            }
+        }
+    }
     
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -30,11 +45,7 @@ class SpringfieldViewController: UIViewController {
         
         prepare()
         
-        if let cameraView = CameraView.instanceFromNib() as? CameraView {
-            self.cameraView = cameraView
-            view.addSubview(cameraView)
-            cameraView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        }
+        initializeCameraView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,13 +56,20 @@ class SpringfieldViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        stop()
+        pause()
     }
     
-    func showPhoto(image: UIImage) {
-        if let quickViewController = QuickLookViewController.viewController() {
-            quickViewController.photoImage = image
-            present(quickViewController, animated: true)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        resume()
+    }
+    
+    func initializeCameraView() {
+        if let cameraView = CameraView.instanceFromNib() as? CameraView {
+            self.cameraView = cameraView
+            view.addSubview(cameraView)
+            cameraView.quickViewDelegate = self
+            cameraView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
         }
     }
 }
@@ -198,23 +216,31 @@ extension SpringfieldViewController: VuforiaEAGLViewSceneSource, VuforiaEAGLView
     
     func vuforiaEAGLView(_ view: VuforiaEAGLView!, didTouchDownNode node: SCNNode!) {
         print("touch down \(node.name)\n")
-        cameraView?.removeFromSuperview()
+        cameraView?.isHidden = true
         UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, false, UIScreen.main.scale)
         self.view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
         let image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        showPhoto(image: image)
+        cameraView?.setPhotoThumbnail(image)
+        cameraView?.savePhotoToLibrary(image)
+        cameraView?.isHidden = false
 
     }
     
     func vuforiaEAGLView(_ view: VuforiaEAGLView!, didTouchUp node: SCNNode!) {
         print("touch up \(node.name)\n")
-        boxMaterial.transparency = 1.0
     }
     
     func vuforiaEAGLView(_ view: VuforiaEAGLView!, didTouchCancel node: SCNNode!) {
         print("touch cancel \(node.name)\n")
-        boxMaterial.transparency = 1.0
     }
 }
 
+extension SpringfieldViewController: QuickViewDelegate {
+    func showPhoto(image: UIImage) {
+        if let quickViewController = QuickLookViewController.viewController() {
+            quickViewController.photoImage = image
+            present(quickViewController, animated: true)
+        }
+    }
+}

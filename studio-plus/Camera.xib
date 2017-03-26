@@ -6,7 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,49 +20,46 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMM-I9-avA">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                    <rect key="frame" x="15" y="30" width="345" height="48"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4l-hX-7ja">
-                            <rect key="frame" x="319" y="0.0" width="56" height="48"/>
+                            <rect key="frame" x="305" y="9.5" width="40" height="29.5"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="56" id="Nni-oC-6bt"/>
-                                <constraint firstAttribute="height" constant="48" id="w5v-3g-A00"/>
+                                <constraint firstAttribute="width" constant="40" id="Nni-oC-6bt"/>
+                                <constraint firstAttribute="width" secondItem="J4l-hX-7ja" secondAttribute="height" multiplier="8:6" id="kDr-59-Scb"/>
                             </constraints>
                             <state key="normal" image="simpsons-camera-switch"/>
                             <connections>
                                 <action selector="switchCameras:" destination="LfL-VC-J2K" eventType="touchUpInside" id="htQ-yK-piP"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oD-MI-q22">
-                            <rect key="frame" x="0.0" y="0.0" width="30" height="50"/>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oD-MI-q22">
+                            <rect key="frame" x="0.0" y="9.5" width="30" height="29.5"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="50" id="qbs-G1-s1x"/>
+                                <constraint firstAttribute="width" secondItem="5oD-MI-q22" secondAttribute="height" multiplier="1:1" id="3PR-fg-qt9"/>
                             </constraints>
                             <connections>
                                 <action selector="toggleHint:" destination="LfL-VC-J2K" eventType="touchUpInside" id="GfP-sJ-ZJT"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="J4l-hX-7ja" secondAttribute="bottom" id="FwF-5C-HOC"/>
-                        <constraint firstItem="J4l-hX-7ja" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" id="IT7-ei-4NW"/>
                         <constraint firstAttribute="height" constant="48" id="LOd-QG-wiv"/>
+                        <constraint firstItem="J4l-hX-7ja" firstAttribute="centerY" secondItem="YMM-I9-avA" secondAttribute="centerY" id="NGL-g9-N3L"/>
+                        <constraint firstItem="5oD-MI-q22" firstAttribute="centerY" secondItem="YMM-I9-avA" secondAttribute="centerY" id="OWi-il-CRs"/>
                         <constraint firstItem="5oD-MI-q22" firstAttribute="leading" secondItem="YMM-I9-avA" secondAttribute="leading" id="QcV-UF-2D5"/>
                         <constraint firstAttribute="trailing" secondItem="J4l-hX-7ja" secondAttribute="trailing" id="VxV-jF-t8N"/>
-                        <constraint firstAttribute="trailing" secondItem="J4l-hX-7ja" secondAttribute="trailing" id="Vy5-N9-t3I"/>
-                        <constraint firstAttribute="bottom" secondItem="J4l-hX-7ja" secondAttribute="bottom" id="cZ5-L9-4bf"/>
-                        <constraint firstItem="J4l-hX-7ja" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" id="lKR-au-YE4"/>
-                        <constraint firstItem="5oD-MI-q22" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" id="mc0-Qo-do6"/>
+                        <constraint firstItem="5oD-MI-q22" firstAttribute="height" secondItem="J4l-hX-7ja" secondAttribute="height" id="aoJ-zD-zvR"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkp-6O-f3g" userLabel="Bottom Controls">
                     <rect key="frame" x="0.0" y="571" width="375" height="96"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cz-RU-Qkm">
-                            <rect key="frame" x="148" y="8" width="80" height="80"/>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cz-RU-Qkm">
+                            <rect key="frame" x="158" y="18" width="60" height="60"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="80" id="CPc-H8-2Ba"/>
+                                <constraint firstAttribute="width" constant="60" id="CPc-H8-2Ba"/>
+                                <constraint firstAttribute="height" constant="60" id="n7r-eT-AWW"/>
                             </constraints>
                             <state key="normal" image="hp-camera-button"/>
                             <connections>
@@ -81,27 +78,24 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29792774820000001" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="9cz-RU-Qkm" firstAttribute="centerX" secondItem="Qkp-6O-f3g" secondAttribute="centerX" id="4fr-DI-aOf"/>
-                        <constraint firstAttribute="bottom" secondItem="Bj1-VP-LfK" secondAttribute="bottom" constant="26" id="J3Y-Zl-xW5"/>
-                        <constraint firstItem="9cz-RU-Qkm" firstAttribute="top" secondItem="Qkp-6O-f3g" secondAttribute="topMargin" id="LCg-p6-9I1"/>
-                        <constraint firstItem="Bj1-VP-LfK" firstAttribute="top" secondItem="Qkp-6O-f3g" secondAttribute="top" constant="25" id="Usy-WS-JdB"/>
                         <constraint firstAttribute="height" constant="96" id="deE-qf-uTJ"/>
-                        <constraint firstItem="9cz-RU-Qkm" firstAttribute="bottom" secondItem="Qkp-6O-f3g" secondAttribute="bottomMargin" id="mva-h8-Oth"/>
+                        <constraint firstItem="9cz-RU-Qkm" firstAttribute="centerY" secondItem="Qkp-6O-f3g" secondAttribute="centerY" id="lBz-Lx-enR"/>
                         <constraint firstItem="Bj1-VP-LfK" firstAttribute="leading" secondItem="Qkp-6O-f3g" secondAttribute="leading" constant="36" id="n7S-ea-GYV"/>
+                        <constraint firstItem="Bj1-VP-LfK" firstAttribute="centerY" secondItem="Qkp-6O-f3g" secondAttribute="centerY" id="nIP-EV-Kqo"/>
                     </constraints>
                 </view>
             </subviews>
             <constraints>
-                <constraint firstItem="YMM-I9-avA" firstAttribute="leading" secondItem="LfL-VC-J2K" secondAttribute="leading" id="80R-Uu-7TA"/>
+                <constraint firstItem="YMM-I9-avA" firstAttribute="leading" secondItem="LfL-VC-J2K" secondAttribute="leading" constant="15" id="80R-Uu-7TA"/>
                 <constraint firstItem="8qF-6R-w3M" firstAttribute="bottom" secondItem="Qkp-6O-f3g" secondAttribute="bottom" id="HZM-0q-2sN"/>
                 <constraint firstItem="Qkp-6O-f3g" firstAttribute="leading" secondItem="LfL-VC-J2K" secondAttribute="leading" id="L57-B2-PHF"/>
                 <constraint firstItem="8qF-6R-w3M" firstAttribute="top" secondItem="LfL-VC-J2K" secondAttribute="top" id="LWj-d4-OAc"/>
-                <constraint firstAttribute="trailing" secondItem="YMM-I9-avA" secondAttribute="trailing" id="S33-HC-LeL"/>
-                <constraint firstItem="8qF-6R-w3M" firstAttribute="trailing" secondItem="YMM-I9-avA" secondAttribute="trailing" id="Y3k-pB-RK1"/>
+                <constraint firstAttribute="trailing" secondItem="YMM-I9-avA" secondAttribute="trailing" constant="15" id="S33-HC-LeL"/>
                 <constraint firstAttribute="bottom" secondItem="8qF-6R-w3M" secondAttribute="bottom" id="hAl-oY-lLv"/>
-                <constraint firstItem="8qF-6R-w3M" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" id="kdv-af-l5X"/>
+                <constraint firstItem="8qF-6R-w3M" firstAttribute="top" secondItem="YMM-I9-avA" secondAttribute="top" constant="-30" id="kdv-af-l5X"/>
+                <constraint firstAttribute="trailing" secondItem="8qF-6R-w3M" secondAttribute="trailing" id="lu8-bR-RLZ"/>
                 <constraint firstItem="8qF-6R-w3M" firstAttribute="leading" secondItem="LfL-VC-J2K" secondAttribute="leading" id="oAQ-U7-gf2"/>
                 <constraint firstAttribute="trailing" secondItem="Qkp-6O-f3g" secondAttribute="trailing" id="yS5-er-06k"/>
             </constraints>

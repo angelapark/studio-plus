@@ -34,6 +34,10 @@ class CameraView: UIView {
         return UINib(nibName: "Camera", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
 
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
     @IBAction func switchCameras(_ sender: AnyObject) {
         // Make sure the device has more than 1 camera.
         if AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo).count > 1 {

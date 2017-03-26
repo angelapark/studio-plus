@@ -10,12 +10,13 @@ import UIKit
 import AVFoundation
 import Photos
 
-protocol QuickViewDelegate {
+protocol CameraViewDelegate {
     func showPhoto(image: UIImage)
+    func toggleHint()
 }
 
 class CameraView: UIView {
-    var quickViewDelegate: QuickViewDelegate?
+    var delegate: CameraViewDelegate?
     @IBOutlet weak var camPreview: UIView!
     @IBOutlet weak var thumbnail: UIButton!
     @IBOutlet weak var hintButton: UIButton!
@@ -77,11 +78,16 @@ class CameraView: UIView {
             }
         }
     }
-
+    func toggleHint(toSelected: Bool? = nil) {
+        let isSelected = toSelected ?? !hintButton.isSelected
+        hintButton.isSelected = isSelected
+    }
 
 
     @IBAction func toggleHint(_ sender: UIButton) {
-        hintButton.isSelected = !hintButton.isSelected
+        toggleHint()
+        delegate?.toggleHint()
+        
     }
     
     @IBAction func displayThumbnail(_ sender: Any) {
@@ -89,7 +95,7 @@ class CameraView: UIView {
             return
         }
     
-        quickViewDelegate?.showPhoto(image: image)
+        delegate?.showPhoto(image: image)
     }
 
     func configure(brandAssets: CameraBrandAssets) {
@@ -164,7 +170,7 @@ class CameraView: UIView {
     }
     
     func videoQueue() -> DispatchQueue {
-        return DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default)
+        return DispatchQueue.global()
     }
     
     func setupPreview() {

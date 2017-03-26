@@ -18,7 +18,6 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qF-6R-w3M" customClass="CameraView" customModule="studio_plus" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMM-I9-avA">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
@@ -88,7 +87,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="YMM-I9-avA" firstAttribute="leading" secondItem="LfL-VC-J2K" secondAttribute="leading" id="80R-Uu-7TA"/>
                 <constraint firstItem="8qF-6R-w3M" firstAttribute="bottom" secondItem="Qkp-6O-f3g" secondAttribute="bottom" id="HZM-0q-2sN"/>

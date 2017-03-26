@@ -10,17 +10,6 @@ import UIKit
 
 class WandViewController: CameraViewController {
     @IBOutlet weak var wandImage: UIImageView!
-    
-    var spellStartPointMet = false
-    var spellPeakPointMet = false
-    var spellEndPointMet = false {
-        didSet {
-            if spellEndPointMet {
-                print("APPLY FILTER")
-            }
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -63,7 +52,7 @@ class WandViewController: CameraViewController {
         
         recognizer.setTranslation(CGPoint.zero, in: self.view)
         if recognizer.state.rawValue == 3 {
-            print("Apply Filter")
+            //apply filter
         }
     }
 

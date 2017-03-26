@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yNq-V3-wY8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,20 +21,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Your Own Adventure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIL-Ub-GET">
-                                <rect key="frame" x="77" y="20" width="220" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bua-nG-poe">
+                                <rect key="frame" x="68.5" y="269.5" width="238" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yea-ht-sSs">
+                                        <rect key="frame" x="0.0" y="0.0" width="238" height="59"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="238" id="Fum-a9-jMZ"/>
+                                            <constraint firstAttribute="height" constant="59" id="cd2-PI-DUM"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="hp-enter-button"/>
+                                        <connections>
+                                            <segue destination="AiA-20-On3" kind="show" id="juI-WS-E5v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCA-2n-pDj">
+                                        <rect key="frame" x="0.0" y="69" width="238" height="59"/>
+                                        <state key="normal" backgroundImage="simpsons-enter-button"/>
+                                        <connections>
+                                            <segue destination="Y9N-V1-lcb" kind="show" id="bcD-Sg-60t"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bua-nG-poe" firstAttribute="centerX" secondItem="zWJ-H4-htj" secondAttribute="centerX" id="IIT-Yb-51m"/>
+                            <constraint firstItem="Bua-nG-poe" firstAttribute="centerY" secondItem="zWJ-H4-htj" secondAttribute="centerY" id="wij-YN-1ma"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nks-HU-sVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="124" y="-49"/>
         </scene>
+        <!--CameraViewController-->
+        <scene sceneID="my5-FF-ev7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CameraViewController" id="AiA-20-On3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Phu-EZ-DMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="-63"/>
+        </scene>
+        <!--SpringfieldViewController-->
+        <scene sceneID="jAJ-3Z-EOa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SpringfieldViewController" id="Y9N-V1-lcb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWQ-XU-raa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="61"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="hp-enter-button" width="540" height="134"/>
+        <image name="simpsons-enter-button" width="540" height="134"/>
+    </resources>
 </document>

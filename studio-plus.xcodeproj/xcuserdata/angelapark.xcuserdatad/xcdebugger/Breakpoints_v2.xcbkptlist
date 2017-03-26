@@ -93,54 +93,6 @@
             timestampString = "512246958.462822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "configure(brandAssets:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "studio_plus.CameraView.configure (brandAssets : studio_plus.CameraBrandAssets) -&gt; ()"
-                  moduleName = "studio-plus"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/angelapark/studio-plus/studio-plus/CameraView.swift"
-                  timestampString = "512246959.572615"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "studio_plus.CameraView.configure (brandAssets : studio_plus.CameraBrandAssets) -&gt; ()"
-                  moduleName = "studio-plus"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/angelapark/studio-plus/studio-plus/CameraView.swift"
-                  timestampString = "512246959.574189"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "152">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "studio-plus/CameraView.swift"
-            timestampString = "512246958.462822"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
             endingLineNumber = "88"
             landmarkName = "toggleHint(toSelected:)"
@@ -160,6 +112,22 @@
             startingLineNumber = "93"
             endingLineNumber = "93"
             landmarkName = "toggleHint(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "studio-plus/CameraView.swift"
+            timestampString = "512247136.82868"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "configure(brandAssets:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
